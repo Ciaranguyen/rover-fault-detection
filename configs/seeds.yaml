@@ -1,0 +1,4 @@
+# Seed huấn luyện mô hình. Dò siêu tham số CHỈ dùng tune_seeds và tập val.
+# report_seeds chỉ dùng cho lần chạy cuối, sau khi đã chốt cấu hình.
+tune_seeds: [0]
+report_seeds: [10, 11, 12, 13, 14]

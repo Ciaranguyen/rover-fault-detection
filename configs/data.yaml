@@ -1,0 +1,15 @@
+# Cấu hình sinh dữ liệu. Mỗi tập có khoảng seed RIÊNG, không chồng nhau,
+# để không có episode nào vừa ở train vừa ở test (chống rò rỉ dữ liệu).
+noise_file: data/noise_tiers.npz
+splits:
+  train:          {episodes: 2000, seed_base: 0}
+  val:            {episodes: 500,  seed_base: 100000}
+  test:           {episodes: 500,  seed_base: 200000}
+  # --- tập ngoài phân phối (E5): chỉ đánh giá, không train, không chọn mô hình
+  ood_drift8:     {episodes: 300,  seed_base: 300000, overrides: {drift_rate: [0.08, 0.08], fault_mix: {drift: 1.0}, p_fault: 1.0}}
+  ood_noise2:     {episodes: 300,  seed_base: 310000, overrides: {noise_scale: 2.0}}
+  ood_two_faulty: {episodes: 300,  seed_base: 320000, overrides: {n_faulty: 2, p_fault: 1.0}}
+  ood_n8:         {episodes: 300,  seed_base: 330000, overrides: {n_rovers: 8, area: 30.4}}
+  # --- cho E6: cùng seed với train/val nhưng nhiễu Gaussian
+  train_gauss:    {episodes: 2000, seed_base: 0,      overrides: {noise: gaussian}}
+  val_gauss:      {episodes: 500,  seed_base: 100000, overrides: {noise: gaussian}}

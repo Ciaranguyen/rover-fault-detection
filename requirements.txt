@@ -1,0 +1,6 @@
+# Thư viện cần cài thêm trên Colab (numpy, scipy, scikit-learn, torch có sẵn trên Colab;
+# phiên bản thật của mọi thư viện được ghi lại bằng pip freeze mỗi phiên, xem results/).
+pyyaml>=6.0
+rosbags==0.11.9          # chỉ cần nếu chạy lại src/noise_tiers.py
+# Từ ngày 13/11 (mô hình đồ thị):
+# torch_geometric==2.6.1

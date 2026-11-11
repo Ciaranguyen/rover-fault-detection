@@ -1,0 +1,9 @@
+# Dữ liệu sinh ra: tái tạo được từ seed, không đẩy lên GitHub
+data/*.npz
+data/*_meta.json
+!data/noise_tiers.npz
+# checkpoint mô hình lưu trên Drive riêng của từng tài khoản
+checkpoints/
+*.pt
+__pycache__/
+.ipynb_checkpoints/
