@@ -4,3 +4,4 @@ date,run_id,experiment,model,config,data_split,seed,account,gpu,duration_min,git
 2026-11-12,E0-gen-pro-v2,E0,-,configs/data.yaml,all,-,pro,Tesla T4,3.82,d0f2c11,data/,nhieu block 20s
 2026-11-12,E0-noise-pro-v2,E0,-,src/noise_tiers.py,"TIERS case3,4",-,pro,Tesla T4,0.08,d0f2c11,-,giong repo: True
 2026-11-12,E2-grugat-tune,E2,grugat,"grid h{32,64} x lr{1e-3,3e-3}",train/val,0,pro,Tesla T4,5.2,d898e24,results/runs_pro/E2_grugat_tune.json,
+2026-11-12,E2-grugat-report,E2,grugat,best of tune,train/val,10-14,pro,Tesla T4,10.21,0db4ad0,results/runs_pro/E2_grugat_report.json,
