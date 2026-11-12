@@ -10,3 +10,4 @@ date,run_id,experiment,model,config,data_split,seed,account,gpu,duration_min,git
 2026-11-12,E2-gat-tune,E2,gat,"cosine lr, 60ep, pat10",train/val,0,pro,Tesla T4,7.2,4b08deb,results/runs_pro/E2_gat_tune.json,
 2026-11-12,E2-gat-report,E2,gat,"cosine lr, 60ep, pat10",train/val,10-14,pro,Tesla T4,14.14,6974792,results/runs_pro/E2_gat_report.json,
 2026-11-12,E2-gru-tune,E2,gru,"cosine lr, 60ep, pat10",train/val,0,pro,Tesla T4,2.24,5753f61,results/runs_pro/E2_gru_tune.json,
+2026-11-12,E2-gru-report,E2,gru,"cosine lr, 60ep, pat10",train/val,10-14,pro,Tesla T4,2.93,d28f992,results/runs_pro/E2_gru_report.json,
