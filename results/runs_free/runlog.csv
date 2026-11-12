@@ -1,2 +1,4 @@
 date,run_id,experiment,model,config,data_split,seed,account,gpu,duration_min,git_commit,output_path,notes
 2026-11-12,E0-gen-free,E0,-,configs/data.yaml,all,-,free,CPU,4.84,d2d643d,data/,sinh du lieu + checksum
+2026-11-12,E0-gen-pro-v2,E0,-,configs/data.yaml,all,-,free,Tesla T4,3.82,d0f2c11,data/,nhieu block 20s
+2026-11-12,E0-noise-pro-v2,E0,-,src/noise_tiers.py,"TIERS case3,4",-,free,Tesla T4,0.08,d0f2c11,-,giong repo: True
