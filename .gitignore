@@ -2,8 +2,9 @@
 data/*.npz
 data/*_meta.json
 !data/noise_tiers.npz
-# checkpoint mô hình lưu trên Drive riêng của từng tài khoản
+# checkpoint baseline (pkl) không đẩy; checkpoint mạng nơ-ron nhỏ (<1 MB) thì đẩy để ngày đánh giá dùng lại
 checkpoints/
 *.pt
+!results/runs_*/ckpt/*.pt
 __pycache__/
 .ipynb_checkpoints/
