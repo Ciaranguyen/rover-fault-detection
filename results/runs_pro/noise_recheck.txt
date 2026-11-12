@@ -1,0 +1,13 @@
+case 3 army_2023-03-24-20-09-29_v2: xong
+case 3 corner_2023-03-24-20-18-25_v2: xong
+case 3 diagonal_2023-03-24-20-13-40_v2: xong
+case 4 test1: xong
+case 4 test2: xong
+case 4 test3: xong
+
+Số cặp: 294  số phép đo: 149278
+Độ lệch cặp: trung vị 0.350 m, IQR 0.285..0.427 m
+Phần dư: std 0.072 m, sigma bền vững 0.030 m, tỉ lệ |dư| > 3 sigma bền vững 0.100
+  case 3: 90755 phép đo, std 0.036, sigma bền vững 0.030
+  case 4: 58523 phép đo, std 0.106, sigma bền vững 0.060
+Đã lưu /content/noise_recheck.npz

@@ -1,0 +1,3 @@
+date,run_id,experiment,model,config,data_split,seed,account,gpu,duration_min,git_commit,output_path,notes
+2026-11-12,E0-gen-pro,E0,-,configs/data.yaml,all,-,pro,Tesla T4,3.84,d2d643d,data/,sinh du lieu + checksum
+2026-11-12,E0-noise-pro,E0,-,src/noise_tiers.py,"TIERS case3,4",-,pro,Tesla T4,0.08,d2d643d,/content/noise_recheck.npz,tai tao nhieu giong repo: True
