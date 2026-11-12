@@ -1,0 +1,53 @@
+{
+  "model": "logistic",
+  "split": "val",
+  "config": {
+    "C": 0.01,
+    "n_train_samples": 750000,
+    "window": 30,
+    "alarm_threshold": 0.9975231289863586,
+    "features": [
+      "win_mean_abs",
+      "win_max_abs",
+      "win_min_abs",
+      "win_med_abs",
+      "win_spread",
+      "win_signed",
+      "last_mean_abs",
+      "trend",
+      "win_neighbors",
+      "win_speed",
+      "win_speed_std",
+      "no_evidence"
+    ]
+  },
+  "grid": {
+    "0.01": 0.6563466386738831,
+    "0.1": 0.6543882578224237,
+    "1.0": 0.6541262016509161,
+    "10.0": 0.6542542757096403
+  },
+  "metrics": {
+    "macro_f1": 0.6563466386738831,
+    "precision": {
+      "honest": 0.9797828430557065,
+      "drift": 0.21507357734530505,
+      "spoof": 0.6388050570962479
+    },
+    "recall": {
+      "honest": 0.8788511135785497,
+      "drift": 0.6436877292474181,
+      "spoof": 0.8249591825986201
+    },
+    "threshold": 0.9975231289863586,
+    "fpr_at_thr": 0.01000017624561589,
+    "recall_fault_at_thr": 0.34574363672053915,
+    "recall_drift_at_thr": 0.04248068468562212,
+    "recall_spoof_at_thr": 0.6527360825828198,
+    "median_delay_steps": 39.5,
+    "missed_faulty_rovers": 0.33933933933933935,
+    "ece_fault": 0.333123597566651,
+    "n_samples": 927500
+  },
+  "minutes": 1.1304350256919862
+}
