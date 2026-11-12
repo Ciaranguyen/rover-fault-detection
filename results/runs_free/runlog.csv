@@ -3,3 +3,4 @@ date,run_id,experiment,model,config,data_split,seed,account,gpu,duration_min,git
 2026-11-12,E1-threshold-val,E1,threshold,"w30; t1 @FPR1%, t2 max F1",val,-,free,CPU,0.29,d0f2c11,results/runs_free/E1_threshold_w30_val.json,
 2026-11-12,E1-logistic-val,E1,logistic,"w30; C in {0.01,0.1,1,10}",train/val,-,free,CPU,1.17,d0f2c11,results/runs_free/E1_logistic_w30_val.json,
 2026-11-12,E1-ae-tune,E1,ae,"grid h{32,64} x lr{1e-3,3e-3}",train/val,0,free,Tesla T4,22.99,d898e24,results/runs_free/E2_ae_tune.json,
+2026-11-12,E1-ae-tune,E1,ae,"cosine lr, 60ep, pat10",train/val,0,free,Tesla T4,46.53,a467590,results/runs_free/E2_ae_tune.json,
