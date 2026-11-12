@@ -12,6 +12,9 @@ src/noise_tiers.py     trích mô hình nhiễu UWB từ dữ liệu thật TIER
 src/sim.py             mô phỏng đội rover, định vị tự khai, đo UWB, các loại lỗi
 src/make_dataset.py    sinh các tập dữ liệu -> data/<split>.npz
 src/check_data.py      E0: kiểm tra phân bố phần dư theo nhóm
+src/features.py        phần dư range và 12 đặc trưng cửa sổ (nhân quả)
+src/metrics.py         thước đo chung: macro-F1, recall khi báo nhầm <= 1%, độ trễ phát hiện, ECE
+src/baselines.py       E1: baseline ngưỡng và hồi quy logistic
 src/checksum.py        mã băm dữ liệu để đối chiếu giữa các máy
 src/runlog.py          ghi nhật ký mỗi lần chạy
 results/runs_pro/      kết quả và runlog.csv của tài khoản Colab Pro

@@ -44,6 +44,9 @@ class SimConfig:
     noise: str = "empirical"              # "empirical" (TIERS) hoặc "gaussian"
     noise_scale: float = 1.0              # nhân phần dư (dùng cho tập ngoài phân phối)
     residual_case: int = 4                # case TIERS để lấy phần dư (4 = robot di chuyển)
+    noise_temporal: str = "block"         # "block": ghép các đoạn liên tiếp của chuỗi nhiễu thật
+                                          # (giữ tương quan thời gian); "iid": bốc độc lập từng bước
+    noise_block: int = 20                 # độ dài mỗi đoạn (bước = giây)
     calibrate_global_bias: bool = True    # trừ độ lệch trung vị chung, như hiệu chỉnh trễ ăng-ten
 
 
@@ -55,6 +58,11 @@ class NoiseModel:
         if cfg.residual_case is not None:
             res = res[z["source"] == cfg.residual_case]
         self.residual = res
+        # chuỗi 1 Hz theo thời gian, để ghép đoạn (block bootstrap)
+        off = z["series_offsets"]
+        keep = [i for i in range(len(off) - 1)
+                if cfg.residual_case is None or z["series_source"][i] == cfg.residual_case]
+        self.series = [z["series"][off[i]:off[i + 1]] for i in keep]
         self.global_bias = np.median(self.bias) if cfg.calibrate_global_bias else 0.0
         self.cfg = cfg
         # tham số Gaussian cùng mức độ lệch chuẩn, dùng cho thí nghiệm E6
@@ -69,10 +77,24 @@ class NoiseModel:
         return b - self.global_bias
 
     def residuals(self, rng, shape):
+        """shape = (T, số cặp)."""
         if self.cfg.noise == "gaussian":
             e = rng.normal(0.0, self.g_res_sd, shape)
-        else:
+        elif self.cfg.noise_temporal == "iid":
             e = rng.choice(self.residual, shape)
+        else:
+            T, P = shape
+            B = self.cfg.noise_block
+            e = np.empty(shape, np.float32)
+            for p in range(P):
+                col, t = [], 0
+                while t < T:
+                    s = self.series[rng.integers(len(self.series))]
+                    L = min(B, len(s), T - t)
+                    st = rng.integers(0, len(s) - L + 1)
+                    col.append(s[st:st + L])
+                    t += L
+                e[:, p] = np.concatenate(col)[:T]
         return self.cfg.noise_scale * e
 
 

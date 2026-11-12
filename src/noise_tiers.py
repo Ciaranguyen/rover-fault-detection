@@ -12,6 +12,9 @@ Tách thành: độ lệch riêng của từng cặp (trung vị sai số của 
     residual  : phần dư sau khi trừ độ lệch cặp (m)
     dist      : khoảng cách thật tương ứng với từng phần dư (m)
     source    : case lấy dữ liệu (3 = robot đứng yên, 4 = robot di chuyển)
+    series, series_offsets, series_source :
+                chuỗi phần dư của từng cặp, lấy mẫu lại 1 Hz, giữ nguyên thứ tự thời gian
+                (nhiễu UWB thật tương quan theo thời gian: trễ 1 s tương quan khoảng 0,4–0,5)
 
 Chạy:
     python src/noise_tiers.py --tiers <đường dẫn repo TIERS> --out data/noise_tiers.npz
@@ -70,8 +73,15 @@ def errors_from_bag(bag_dir, min_samples=20):
         g = np.linalg.norm(interp_pose(poses[ta], t) - interp_pose(poses[tb], t), axis=1)
         e = rr - g
         keep = np.isfinite(e)
-        out.append(((a, b), e[keep], g[keep]))
+        out.append(((a, b), e[keep], g[keep], t[keep]))
     return out
+
+
+def resample_1hz(t, x):
+    """Lấy mẫu chuỗi về 1 Hz bằng giá trị đo gần nhất (giữ tương quan thời gian thật)."""
+    grid = np.arange(t[0], t[-1], 1.0)
+    j = np.clip(np.searchsorted(t, grid), 0, len(t) - 1)
+    return x[j]
 
 
 def main():
@@ -82,22 +92,30 @@ def main():
     args = ap.parse_args()
 
     bias, resid, dist, src = [], [], [], []
+    series, series_src = [], []
     for case in [int(c) for c in args.cases.split(",")]:
         for bag in sorted((Path(args.tiers) / f"case_{case}" / "ros2").iterdir()):
             if not (bag / "metadata.yaml").exists():
                 continue
-            for _, e, g in errors_from_bag(bag):
+            for _, e, g, t in errors_from_bag(bag):
                 b = np.median(e)
                 bias.append(b)
                 resid.append(e - b)
                 dist.append(g)
                 src.append(np.full(len(e), case))
+                s1 = resample_1hz(t, e - b)
+                if len(s1) >= 30:
+                    series.append(s1.astype(np.float32))
+                    series_src.append(case)
             print(f"case {case} {bag.name}: xong")
 
     bias = np.asarray(bias)
     resid, dist, src = map(np.concatenate, (resid, dist, src))
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
-    np.savez_compressed(args.out, bias=bias, residual=resid, dist=dist, source=src)
+    offsets = np.cumsum([0] + [len(x) for x in series])
+    np.savez_compressed(args.out, bias=bias, residual=resid, dist=dist, source=src,
+                        series=np.concatenate(series), series_offsets=offsets,
+                        series_source=np.asarray(series_src))
 
     robust = 1.4826 * np.median(np.abs(resid))
     print(f"\nSố cặp: {len(bias)}  số phép đo: {len(resid)}")
@@ -107,6 +125,9 @@ def main():
     for case in np.unique(src):
         r = resid[src == case]
         print(f"  case {case}: {len(r)} phép đo, std {r.std():.3f}, sigma bền vững {1.4826*np.median(np.abs(r)):.3f}")
+    lens = np.diff(offsets)
+    print(f"Chuỗi 1 Hz: {len(series)} chuỗi, dài trung vị {int(np.median(lens))} s")
+    s1 = np.concatenate([x for x, c in zip(series, series_src) if c == 4])
     print(f"Đã lưu {args.out}")
 
 
