@@ -7,7 +7,7 @@ rồi chạy các cell của tài khoản đó theo thứ tự. Mỗi cell tự 
 nên lỡ mất kết nối thì chỉ mất cell đang chạy.
 
 Ngân sách dò siêu tham số bằng nhau cho mọi mô hình học: 4 cấu hình
-(hidden ∈ {32, 64} × lr ∈ {1e-3, 3e-3}), tối đa 30 epoch, dừng sớm sau 5 epoch không cải thiện
+(hidden ∈ {32, 64} × lr ∈ {1e-3, 3e-3}), tối đa 60 epoch, lr giảm theo cosine, dừng sớm sau 10 epoch không cải thiện
 macro-F1 trên val. Seed dò: 0. Seed báo cáo: 10–14.
 
 ### S — chuẩn bị (mọi lần mở notebook)

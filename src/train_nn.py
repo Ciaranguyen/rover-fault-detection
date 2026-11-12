@@ -105,6 +105,7 @@ def train_supervised(model_name, hidden, lr, seed, Dtr, Dv, args):
     set_seed(seed)
     model = MODELS[model_name](hidden=hidden).to(DEV)
     opt = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=1e-4)
+    sched = torch.optim.lr_scheduler.CosineAnnealingLR(opt, T_max=args.epochs)   # lr giảm dần -> val ổn định hơn
     loss_fn = nn.CrossEntropyLoss(weight=class_weights(Dtr, args.window))
     w0 = args.window - 1
     best, best_state, best_ep, bad = -1.0, None, 0, 0
@@ -124,6 +125,7 @@ def train_supervised(model_name, hidden, lr, seed, Dtr, Dv, args):
             nn.utils.clip_grad_norm_(model.parameters(), 1.0)
             opt.step()
             tot += loss.item() * len(b["label"])
+        sched.step()
         pv = predict(model, Dv)
         p, y, _ = flat(pv, Dv["label"], args.window)
         f = f1_score(y, p.argmax(1), average="macro", labels=[0, 1, 2], zero_division=0)
@@ -183,6 +185,7 @@ def train_ae(hidden, lr, seed, Dtr, Dv, args):
     Xv, yv = ae_windows(Dv, args.window)
     model = SeqAE(hidden=hidden, window=args.window).to(DEV)
     opt = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=1e-5)
+    sched = torch.optim.lr_scheduler.CosineAnnealingLR(opt, T_max=args.epochs)
     rng = np.random.default_rng(seed)
     best, best_state, best_ep, bad, t0, history = -1.0, None, 0, 0, time.time(), []
     Xt = torch.from_numpy((Xtr - mu) / sd)
@@ -197,6 +200,7 @@ def train_ae(hidden, lr, seed, Dtr, Dv, args):
             loss.backward()
             opt.step()
             tot += loss.item() * len(x)
+        sched.step()
         sv = ae_score(model, Xv, mu, sd)
         t1, t2, f = two_thresholds(sv, yv)
         history.append({"epoch": ep, "train_loss": tot / len(perm), "val_macro_f1": float(f)})
@@ -249,8 +253,8 @@ def main():
     ap.add_argument("--model", choices=["gru", "gat", "grugat", "ae"], required=True)
     ap.add_argument("--mode", choices=["tune", "report", "final"], required=True)
     ap.add_argument("--window", type=int, default=30, help="bước đầu tiên được đánh giá = window-1")
-    ap.add_argument("--epochs", type=int, default=30)
-    ap.add_argument("--patience", type=int, default=5)
+    ap.add_argument("--epochs", type=int, default=60)
+    ap.add_argument("--patience", type=int, default=10)
     ap.add_argument("--batch", type=int, default=32)
     ap.add_argument("--train_split", default="train")
     ap.add_argument("--val_split", default="val")
