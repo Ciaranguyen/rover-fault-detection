@@ -1,0 +1,3 @@
+data/train.npz: 26decb9df0553ac7
+data/val.npz: f6a32b4b58528bca
+data/test.npz: b972f3f1d379bb76
