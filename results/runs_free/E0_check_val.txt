@@ -1,0 +1,7 @@
+honest pair, t<150           n= 926670 median 0.106  p90 0.309  p99 0.600
+honest pair, t>=300          n= 362830 median 0.232  p90 0.556  p99 0.893
+about drift rover            n=  88125 median 0.629  p90 1.753  p99 2.862
+about spoof rover (all)      n=  87573 median 2.588  p90 10.586  p99 19.319
+spoof_one: receiver j*       n=  12034 median 0.094  p90 0.282  p99 0.566
+spoof_one: other receivers   n=  28699 median 4.200  p90 13.708  p99 26.103
+neighbors in range per rover per step: mean 2.40
