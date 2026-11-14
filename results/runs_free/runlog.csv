@@ -6,3 +6,4 @@ date,run_id,experiment,model,config,data_split,seed,account,gpu,duration_min,git
 2026-11-12,E1-ae-tune,E1,ae,"cosine lr, 60ep, pat10",train/val,0,free,Tesla T4,46.53,a467590,results/runs_free/E2_ae_tune.json,
 2026-11-12,E1-ae-report,E1,ae,best of tune,train/val,10-14,free,Tesla T4,59.62,5753f61,results/runs_free/E2_ae_report.json,
 2026-11-14,E6-grugat-gauss-report,E6,grugat,"h64 lr3e-3, noise gaussian",train_gauss/val_gauss,10-14,free,Tesla T4,18.7,da40ec9,results/runs_free/E2_grugat_gauss_report.json,
+2026-11-14,E6-grugat-gauss-final,E6,grugat,"train gaussian, test empirical","test,ood_noise2",10-14,free,Tesla T4,0.35,6071eb8,results/runs_free/E3_grugat_gauss_final.json,
