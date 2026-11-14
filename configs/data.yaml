@@ -13,3 +13,11 @@ splits:
   # --- cho E6: cùng seed với train/val nhưng nhiễu Gaussian
   train_gauss:    {episodes: 2000, seed_base: 0,      overrides: {noise: gaussian}}
   val_gauss:      {episodes: 500,  seed_base: 100000, overrides: {noise: gaussian}}
+  # --- cho E7 (thêm ngày 14/11, sau khi thấy kết quả OOD): seed mới, không trùng tập nào ở trên
+  # val cùng điều kiện với tập OOD, CHỈ để chọn ngưỡng khi so sánh công bằng (không train)
+  val_two_faulty: {episodes: 300,  seed_base: 340000, overrides: {n_faulty: 2, p_fault: 1.0}}
+  val_noise2:     {episodes: 300,  seed_base: 350000, overrides: {noise_scale: 2.0}}
+  # tập kiểm tra MỚI cho 2 rover lỗi (tập ood_two_faulty cũ đã bị nhìn khi chẩn đoán)
+  ood_two_faulty_b: {episodes: 300, seed_base: 370000, overrides: {n_faulty: 2, p_fault: 1.0}}
+  # dữ liệu train bổ sung có 2 rover lỗi (mô hình biến thể _mf)
+  train_two:      {episodes: 1000, seed_base: 400000, overrides: {n_faulty: 2, p_fault: 1.0}}

@@ -56,6 +56,13 @@ def transform(D):
 
 
 def load_split(split, max_ep=None):
+    if isinstance(split, (list, tuple)):                 # ghép nhiều tập (ví dụ train + train_two)
+        parts = [load_split(s) for s in split]
+        D = {k: (sum((p[k] for p in parts), []) if k == "meta" else np.concatenate([p[k] for p in parts]))
+             for k in parts[0]}
+        if max_ep:
+            D = {k: v[:max_ep] for k, v in D.items()}
+        return D
     D = transform(build(split))
     if max_ep:
         D = {k: (v[:max_ep] if k != "meta" else v[:max_ep]) for k, v in D.items()}
@@ -256,7 +263,7 @@ def main():
     ap.add_argument("--epochs", type=int, default=60)
     ap.add_argument("--patience", type=int, default=10)
     ap.add_argument("--batch", type=int, default=32)
-    ap.add_argument("--train_split", default="train")
+    ap.add_argument("--train_split", nargs="+", default=["train"])
     ap.add_argument("--val_split", default="val")
     ap.add_argument("--splits", nargs="+", default=["test"])
     ap.add_argument("--tag", default="", help="hậu tố tên file, ví dụ _gauss")
