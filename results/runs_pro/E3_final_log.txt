@@ -1,0 +1,164 @@
+Thiết bị: cuda
+  baseline: t1=4.449 t2=4.508 | logistic C=0.01
+
+=== test
+mô hình           macro-F1       recall@1%     FPR    trễ  bỏ sót    ECE
+threshold  0.471±0.000   0.181±0.000   0.010   78.0   0.541    nan
+logistic   0.661±0.000   0.350±0.000   0.009   41.0   0.303  0.330
+ae         0.588±0.002   0.377±0.003   0.010   38.4   0.353    nan
+gat        0.717±0.006   0.719±0.008   0.009   10.6   0.000  0.213
+gru        0.860±0.022   0.845±0.009   0.009   10.6   0.002  0.129
+grugat     0.879±0.021   0.866±0.027   0.010    9.2   0.000  0.102
+
+nhóm (tỉ lệ báo động)                     logistic       gat       gru    grugat
+drift | tất cả                               0.049     0.538     0.711     0.749
+drift | 0-30 bước sau lỗi                    0.000     0.038     0.127     0.117
+drift | 30-100 bước sau lỗi                  0.000     0.422     0.624     0.666
+drift | 100-400 bước sau lỗi                 0.088     0.722     0.900     0.947
+drift | 0 người quan sát                     0.040     0.023     0.847     0.868
+spoof | tất cả                               0.757     0.965     0.981     0.990
+spoof | 0-30 bước sau lỗi                    0.193     0.831     0.891     0.929
+spoof | 30-100 bước sau lỗi                  0.783     0.972     0.987     0.999
+spoof | 100-400 bước sau lỗi                 0.880     0.994     1.000     1.000
+spoof | 0 người quan sát                     0.603     0.890     0.982     0.999
+spoof_one | tất cả                           0.547     0.836     0.978     0.979
+spoof_one | 0-30 bước sau lỗi                0.111     0.733     0.877     0.883
+spoof_one | 30-100 bước sau lỗi              0.586     0.894     0.986     0.991
+spoof_one | 100-400 bước sau lỗi             0.634     0.829     0.999     0.997
+spoof_one | 0 người quan sát                 0.588     0.403     0.996     0.992
+trung thực | đang đo với rover lỗi           0.023     0.016     0.016     0.010
+trung thực | còn lại                         0.002     0.006     0.005     0.011
+
+Chênh lệch, trung bình [KTC 95% bootstrap theo episode]:
+  grugat - gru         macro_f1 +0.019 [+0.014, +0.024] | recall_fault_at_thr +0.022 [+0.014, +0.031] | fpr_at_thr +0.001 [-0.000, +0.002] | fpr_honest_neighbor -0.007 [-0.009, -0.005]
+  grugat - gat         macro_f1 +0.162 [+0.156, +0.168] | recall_fault_at_thr +0.148 [+0.135, +0.161] | fpr_at_thr +0.001 [+0.000, +0.002] | fpr_honest_neighbor -0.006 [-0.008, -0.005]
+  grugat - logistic    macro_f1 +0.218 [+0.210, +0.226] | recall_fault_at_thr +0.517 [+0.488, +0.547] | fpr_at_thr +0.001 [-0.001, +0.003] | fpr_honest_neighbor -0.013 [-0.018, -0.009]
+-> results/runs_pro/E3_final_test.json  (0.6 phút)
+
+=== ood_drift8
+mô hình           macro-F1       recall@1%     FPR    trễ  bỏ sót    ECE
+threshold  0.313±0.000   0.013±0.000   0.000  240.5   0.853    nan
+logistic   0.476±0.000   0.313±0.000   0.006  121.5   0.053  0.296
+ae         0.365±0.005   0.132±0.009   0.006  143.4   0.073    nan
+gat        0.512±0.014   0.737±0.018   0.012   16.2   0.000  0.169
+gru        0.576±0.001   0.848±0.011   0.018   17.7   0.000  0.118
+grugat     0.617±0.007   0.876±0.023   0.010   17.5   0.000  0.069
+
+nhóm (tỉ lệ báo động)                     logistic       gat       gru    grugat
+drift | tất cả                               0.313     0.737     0.848     0.876
+drift | 0-30 bước sau lỗi                    0.000     0.214     0.353     0.349
+drift | 30-100 bước sau lỗi                  0.072     0.756     0.849     0.892
+drift | 100-400 bước sau lỗi                 0.523     0.852     0.967     0.992
+drift | 0 người quan sát                     0.325     0.067     0.918     0.949
+trung thực | đang đo với rover lỗi           0.009     0.019     0.029     0.009
+trung thực | còn lại                         0.003     0.003     0.005     0.010
+
+Chênh lệch, trung bình [KTC 95% bootstrap theo episode]:
+  grugat - gru         macro_f1 +0.041 [+0.037, +0.045] | recall_fault_at_thr +0.027 [+0.019, +0.037] | fpr_at_thr -0.009 [-0.011, -0.006] | fpr_honest_neighbor -0.019 [-0.024, -0.015]
+  grugat - gat         macro_f1 +0.106 [+0.102, +0.109] | recall_fault_at_thr +0.138 [+0.129, +0.149] | fpr_at_thr -0.002 [-0.003, -0.001] | fpr_honest_neighbor -0.009 [-0.011, -0.008]
+  grugat - logistic    macro_f1 +0.142 [+0.135, +0.148] | recall_fault_at_thr +0.562 [+0.543, +0.582] | fpr_at_thr +0.003 [+0.001, +0.005] | fpr_honest_neighbor +0.000 [-0.002, +0.002]
+-> results/runs_pro/E3_final_ood_drift8.json  (0.3 phút)
+
+=== ood_noise2
+mô hình           macro-F1       recall@1%     FPR    trễ  bỏ sót    ECE
+threshold  0.462±0.000   0.159±0.000   0.010   75.0   0.567    nan
+logistic   0.667±0.000   0.336±0.000   0.010   38.5   0.356  0.339
+ae         0.597±0.002   0.372±0.003   0.011   40.7   0.354    nan
+gat        0.696±0.007   0.705±0.008   0.018    7.0   0.000  0.236
+gru        0.839±0.013   0.813±0.007   0.014   11.3   0.013  0.123
+grugat     0.844±0.020   0.847±0.023   0.021    7.0   0.001  0.108
+
+nhóm (tỉ lệ báo động)                     logistic       gat       gru    grugat
+drift | tất cả                               0.040     0.530     0.667     0.728
+drift | 0-30 bước sau lỗi                    0.000     0.049     0.095     0.129
+drift | 30-100 bước sau lỗi                  0.000     0.403     0.561     0.610
+drift | 100-400 bước sau lỗi                 0.073     0.718     0.864     0.939
+drift | 0 người quan sát                     0.067     0.029     0.772     0.879
+spoof | tất cả                               0.759     0.971     0.984     0.990
+spoof | 0-30 bước sau lỗi                    0.260     0.859     0.895     0.925
+spoof | 30-100 bước sau lỗi                  0.809     0.973     0.993     1.000
+spoof | 100-400 bước sau lỗi                 0.848     0.996     1.000     0.999
+spoof | 0 người quan sát                     0.757     0.954     0.996     0.993
+spoof_one | tất cả                           0.588     0.840     0.974     0.974
+spoof_one | 0-30 bước sau lỗi                0.111     0.756     0.883     0.888
+spoof_one | 30-100 bước sau lỗi              0.610     0.871     0.974     0.976
+spoof_one | 100-400 bước sau lỗi             0.685     0.843     0.994     0.992
+spoof_one | 0 người quan sát                 0.655     0.439     1.000     0.991
+trung thực | đang đo với rover lỗi           0.022     0.023     0.021     0.018
+trung thực | còn lại                         0.003     0.015     0.010     0.022
+
+Chênh lệch, trung bình [KTC 95% bootstrap theo episode]:
+  grugat - gru         macro_f1 +0.006 [-0.001, +0.012] | recall_fault_at_thr +0.034 [+0.022, +0.047] | fpr_at_thr +0.006 [+0.004, +0.008] | fpr_honest_neighbor -0.003 [-0.008, +0.000]
+  grugat - gat         macro_f1 +0.148 [+0.140, +0.156] | recall_fault_at_thr +0.142 [+0.127, +0.157] | fpr_at_thr +0.003 [+0.001, +0.004] | fpr_honest_neighbor -0.006 [-0.008, -0.003]
+  grugat - logistic    macro_f1 +0.177 [+0.165, +0.190] | recall_fault_at_thr +0.511 [+0.476, +0.548] | fpr_at_thr +0.011 [+0.007, +0.014] | fpr_honest_neighbor -0.004 [-0.011, +0.002]
+-> results/runs_pro/E3_final_ood_noise2.json  (0.3 phút)
+
+=== ood_two_faulty
+mô hình           macro-F1       recall@1%     FPR    trễ  bỏ sót    ECE
+threshold  0.432±0.000   0.196±0.000   0.045   79.5   0.487    nan
+logistic   0.667±0.000   0.379±0.000   0.048   35.0   0.265  0.277
+ae         0.573±0.002   0.444±0.003   0.040   38.0   0.242    nan
+gat        0.725±0.005   0.522±0.018   0.022    8.4   0.000  0.153
+gru        0.833±0.011   0.824±0.010   0.056    5.3   0.014  0.111
+grugat     0.790±0.022   0.578±0.058   0.014   10.9   0.009  0.079
+
+nhóm (tỉ lệ báo động)                     logistic       gat       gru    grugat
+drift | tất cả                               0.045     0.370     0.649     0.530
+drift | 0-30 bước sau lỗi                    0.000     0.035     0.128     0.118
+drift | 30-100 bước sau lỗi                  0.000     0.298     0.540     0.468
+drift | 100-400 bước sau lỗi                 0.080     0.490     0.833     0.663
+drift | 0 người quan sát                     0.051     0.026     0.686     0.482
+spoof | tất cả                               0.716     0.714     0.978     0.647
+spoof | 0-30 bước sau lỗi                    0.251     0.570     0.883     0.678
+spoof | 30-100 bước sau lỗi                  0.770     0.655     0.979     0.680
+spoof | 100-400 bước sau lỗi                 0.797     0.780     0.999     0.622
+spoof | 0 người quan sát                     0.584     0.932     0.983     0.341
+spoof_one | tất cả                           0.568     0.574     0.944     0.585
+spoof_one | 0-30 bước sau lỗi                0.169     0.590     0.837     0.581
+spoof_one | 30-100 bước sau lỗi              0.583     0.522     0.945     0.611
+spoof_one | 100-400 bước sau lỗi             0.658     0.600     0.970     0.571
+spoof_one | 0 người quan sát                 0.562     0.537     0.974     0.472
+trung thực | đang đo với rover lỗi           0.053     0.027     0.064     0.015
+trung thực | còn lại                         0.025     0.003     0.027     0.010
+
+Chênh lệch, trung bình [KTC 95% bootstrap theo episode]:
+  grugat - gru         macro_f1 -0.043 [-0.052, -0.033] | recall_fault_at_thr -0.246 [-0.264, -0.227] | fpr_at_thr -0.042 [-0.050, -0.035] | fpr_honest_neighbor -0.049 [-0.057, -0.041]
+  grugat - gat         macro_f1 +0.066 [+0.058, +0.074] | recall_fault_at_thr +0.056 [+0.041, +0.072] | fpr_at_thr -0.008 [-0.011, -0.006] | fpr_honest_neighbor -0.012 [-0.015, -0.009]
+  grugat - logistic    macro_f1 +0.123 [+0.111, +0.135] | recall_fault_at_thr +0.199 [+0.167, +0.232] | fpr_at_thr -0.034 [-0.042, -0.026] | fpr_honest_neighbor -0.039 [-0.048, -0.030]
+-> results/runs_pro/E3_final_ood_two_faulty.json  (0.3 phút)
+
+=== ood_n8
+mô hình           macro-F1       recall@1%     FPR    trễ  bỏ sót    ECE
+threshold  0.477±0.000   0.195±0.000   0.009   80.0   0.589    nan
+logistic   0.626±0.000   0.374±0.000   0.005   35.0   0.336  0.361
+ae         0.551±0.004   0.323±0.005   0.007   32.6   0.342    nan
+gat        0.740±0.007   0.765±0.005   0.006    9.2   0.001  0.189
+gru        0.825±0.032   0.832±0.007   0.009    4.8   0.016  0.143
+grugat     0.852±0.031   0.855±0.019   0.009    4.3   0.000  0.117
+
+nhóm (tỉ lệ báo động)                     logistic       gat       gru    grugat
+drift | tất cả                               0.051     0.589     0.682     0.723
+drift | 0-30 bước sau lỗi                    0.000     0.041     0.147     0.147
+drift | 30-100 bước sau lỗi                  0.002     0.463     0.605     0.646
+drift | 100-400 bước sau lỗi                 0.090     0.788     0.851     0.903
+drift | 0 người quan sát                     0.012     0.021     0.667     0.754
+spoof | tất cả                               0.861     0.974     0.995     0.994
+spoof | 0-30 bước sau lỗi                    0.273     0.874     0.960     0.962
+spoof | 30-100 bước sau lỗi                  0.937     0.978     1.000     0.997
+spoof | 100-400 bước sau lỗi                 0.965     0.997     1.000     1.000
+spoof | 0 người quan sát                     0.901     0.907     1.000     0.999
+spoof_one | tất cả                           0.531     0.907     0.968     0.980
+spoof_one | 0-30 bước sau lỗi                0.045     0.807     0.921     0.925
+spoof_one | 30-100 bước sau lỗi              0.574     0.933     0.962     0.983
+spoof_one | 100-400 bước sau lỗi             0.623     0.916     0.983     0.991
+spoof_one | 0 người quan sát                 0.561     0.400     0.961     0.984
+trung thực | đang đo với rover lỗi           0.014     0.007     0.018     0.007
+trung thực | còn lại                         0.001     0.006     0.006     0.010
+
+Chênh lệch, trung bình [KTC 95% bootstrap theo episode]:
+  grugat - gru         macro_f1 +0.026 [+0.020, +0.033] | recall_fault_at_thr +0.023 [+0.014, +0.034] | fpr_at_thr -0.000 [-0.002, +0.001] | fpr_honest_neighbor -0.010 [-0.014, -0.006]
+  grugat - gat         macro_f1 +0.112 [+0.104, +0.119] | recall_fault_at_thr +0.090 [+0.078, +0.103] | fpr_at_thr +0.003 [+0.002, +0.004] | fpr_honest_neighbor +0.001 [-0.001, +0.003]
+  grugat - logistic    macro_f1 +0.226 [+0.214, +0.238] | recall_fault_at_thr +0.481 [+0.440, +0.524] | fpr_at_thr +0.004 [+0.002, +0.006] | fpr_honest_neighbor -0.007 [-0.012, -0.002]
+-> results/runs_pro/E3_final_ood_n8.json  (0.5 phút)
+
+Tổng: 3.1 phút
