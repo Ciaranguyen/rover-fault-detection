@@ -1,0 +1,49 @@
+{
+  "model": "threshold",
+  "split": "val",
+  "config": {
+    "t1": 4.557643413543701,
+    "t2": 4.6157425498962406,
+    "val_macro_f1_for_t2": 0.46417443579541234,
+    "window": 10,
+    "alarm_threshold": 4.557643413543701,
+    "features": [
+      "win_mean_abs",
+      "win_max_abs",
+      "win_min_abs",
+      "win_med_abs",
+      "win_spread",
+      "win_signed",
+      "last_mean_abs",
+      "trend",
+      "win_neighbors",
+      "win_speed",
+      "win_speed_std",
+      "no_evidence"
+    ]
+  },
+  "grid": null,
+  "metrics": {
+    "macro_f1": 0.46417443579541234,
+    "precision": {
+      "honest": 0.9337432945178595,
+      "drift": 0.0,
+      "spoof": 0.5935799280509179
+    },
+    "recall": {
+      "honest": 0.9900009433072352,
+      "drift": 0.0,
+      "spoof": 0.3389161004898088
+    },
+    "threshold": 4.557643413543701,
+    "fpr_at_thr": 0.010000166465982676,
+    "recall_fault_at_thr": 0.17162860694889748,
+    "recall_drift_at_thr": 0.0,
+    "recall_spoof_at_thr": 0.3453678832885659,
+    "median_delay_steps": 70.0,
+    "missed_faulty_rovers": 0.5165165165165165,
+    "ece_fault": NaN,
+    "n_samples": 977500
+  },
+  "minutes": 0.22045008341471353
+}
