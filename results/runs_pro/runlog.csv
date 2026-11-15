@@ -12,3 +12,4 @@ date,run_id,experiment,model,config,data_split,seed,account,gpu,duration_min,git
 2026-11-12,E2-gru-tune,E2,gru,"cosine lr, 60ep, pat10",train/val,0,pro,Tesla T4,2.24,5753f61,results/runs_pro/E2_gru_tune.json,
 2026-11-12,E2-gru-report,E2,gru,"cosine lr, 60ep, pat10",train/val,10-14,pro,Tesla T4,2.93,d28f992,results/runs_pro/E2_gru_report.json,
 2026-11-14,E3E4E5-final,E3/E4/E5,all,"ckpt v2, thr tu val",test+ood,10-14,pro,Tesla T4,3.34,da40ec9,results/runs_pro/E3_final_*.json,
+2026-11-15,E7-grugat-mf,E7,grugat_mf,"h64 lr3e-3, train+train_two",train+train_two/val,10-14,pro,Tesla T4,32.6,bbf6ef9,results/runs_pro/E2_grugat_mf_report.json,
