@@ -1,0 +1,6 @@
+Thiết bị: cpu
+  logistic sẵn sàng (1.1 phút)
+  seed 20 | none               holes(lỗi) 0.0198 phủ(lỗi) 0.9728 phủ(không lỗi) 0.9818 báo nhầm/mốc 0.0000
+  seed 20 | oracle             holes(lỗi) 0.0109 phủ(lỗi) 0.9797 phủ(không lỗi) 0.9818 báo nhầm/mốc 0.0000
+  seed 20 | logistic           holes(lỗi) 0.0120 phủ(lỗi) 0.9744 phủ(không lỗi) 0.9824 báo nhầm/mốc 0.0371
+  seed 20 | gru                holes(lỗi) 0.0060 phủ(lỗi) 0.9685 phủ(không lỗi) 0.9732 báo nhầm/mốc 0.2183
