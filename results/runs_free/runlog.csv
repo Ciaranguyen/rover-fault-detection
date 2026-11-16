@@ -15,3 +15,4 @@ date,run_id,experiment,model,config,data_split,seed,account,gpu,duration_min,git
 2026-11-16,E2-gru-ext,E2,gru,h64 lr3e-3,train/val,15-29,free,Tesla T4,8.07,8458780,results/runs_free/E2_gru_report_s15-29.json,
 2026-11-16,E2-gat-ext,E2,gat,h64 lr3e-3,train/val,15-29,free,Tesla T4,36.88,94c289c,results/runs_free/E2_gat_report_s15-29.json,
 2026-11-16,E7-grugat-more,E7,grugat_more,"h64 lr3e-3, train+train_extra",train+train_extra/val,10-14,free,Tesla T4,21.26,7f8b347,results/runs_free/E2_grugat_more_report.json,
+2026-11-16,E8-train-20-29,E8,mappo,"300 iters x 64 env, trust noisy",sim online,20-29,free,CPU,67.05,ad23cf8,results/runs_free/e8/,
