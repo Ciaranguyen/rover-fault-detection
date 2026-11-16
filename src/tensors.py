@@ -24,6 +24,12 @@ from features import residuals  # noqa: E402
 def build(split, data_dir="data", hist=30):
     d = np.load(f"{data_dir}/{split}.npz")
     meta = json.load(open(f"{data_dir}/{split}_meta.json"))["episodes"]
+    return build_arrays(d, meta, hist)
+
+
+def build_arrays(d, meta=None, hist=30):
+    """Như build, nhưng nhận dữ liệu trong bộ nhớ: d có p_hat (E,T,N,2), r (E,T,N,N), label (E,T,N).
+    Dùng cho E8 (chạy bộ phát hiện trực tuyến trên đoạn đầu của episode)."""
     e = residuals(d).astype(np.float32)                   # (E,T,N,N)
     E, T, N, _ = e.shape
     valid = np.isfinite(e) & ~np.eye(N, dtype=bool)[None, None]

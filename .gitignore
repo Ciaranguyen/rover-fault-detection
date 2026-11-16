@@ -6,5 +6,6 @@ data/*_meta.json
 checkpoints/
 *.pt
 !results/runs_*/ckpt/*.pt
+!results/runs_*/e8/*.pt
 __pycache__/
 .ipynb_checkpoints/
