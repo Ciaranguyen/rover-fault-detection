@@ -1,0 +1,32 @@
+10 seed chính sách × 300 episode (207 có lỗi)
+
+điều kiện               holes(lỗi) TB [IQM]      phủ(lỗi) TB [IQM]  phủ(không lỗi)  báo nhầm/mốc
+none                  1.897% [ 1.893%]     97.33% [ 97.31%]          98.33%         0.0000
+oracle                1.074% [ 1.086%]     97.97% [ 97.96%]          98.33%         0.0000
+logistic              1.133% [ 1.130%]     97.52% [ 97.52%]          98.32%         0.0360
+gru                   0.662% [ 0.655%]     96.78% [ 96.78%]          97.40%         0.2103
+grugat                0.875% [ 0.863%]     97.40% [ 97.40%]          98.00%         0.1045
+grugat+blame0.7%      0.868% [ 0.852%]     97.36% [ 97.35%]          98.00%         0.1051
+grugat+blame2.1%      0.859% [ 0.842%]     97.33% [ 97.33%]          98.00%         0.1060
+grugat+blame10%       0.806% [ 0.794%]     97.16% [ 97.19%]          98.00%         0.1133
+heur_oracle           0.776% [ 0.776%]     83.45% [ 83.45%]          84.09%         0.0000
+heur_grugat           0.892% [ 0.894%]     83.86% [ 83.86%]          84.28%         0.0145
+
+So sánh ghép cặp trên episode có lỗi (điểm %, KTC 95% hai tầng; dương = a lớn hơn b):
+  [H1] holes    none               − oracle          +0.824 [ +0.735,  +0.917]  ( +4.74 m²; 10/10 seed dương)  có ý nghĩa
+  [H1] holes    logistic           − oracle          +0.059 [ -0.011,  +0.132]  ( +0.34 m²; 9/10 seed dương)  không phân biệt được
+  [H1] holes    gru                − oracle          -0.412 [ -0.464,  -0.356]  ( -2.38 m²; 0/10 seed dương)  có ý nghĩa
+  [H1] holes    grugat             − oracle          -0.199 [ -0.259,  -0.138]  ( -1.15 m²; 0/10 seed dương)  có ý nghĩa
+  [H1] holes    none               − logistic        +0.764 [ +0.682,  +0.851]  ( +4.40 m²; 10/10 seed dương)  có ý nghĩa
+  [H1] holes    logistic           − gru             +0.472 [ +0.394,  +0.555]  ( +2.72 m²; 10/10 seed dương)  có ý nghĩa
+  [H1] holes    gru                − grugat          -0.213 [ -0.269,  -0.159]  ( -1.23 m²; 0/10 seed dương)  có ý nghĩa
+  [H2] coverage grugat             − gru             +0.622 [ +0.448,  +0.795]  ( +3.58 m²; 10/10 seed dương)  có ý nghĩa
+  [H2] coverage grugat+blame0.7%   − grugat          -0.037 [ -0.074,  -0.008]  ( -0.22 m²; 1/10 seed dương)  có ý nghĩa
+  [H2] coverage grugat+blame2.1%   − grugat          -0.070 [ -0.116,  -0.027]  ( -0.40 m²; 1/10 seed dương)  có ý nghĩa
+  [H2] coverage grugat+blame10%    − grugat          -0.234 [ -0.365,  -0.124]  ( -1.35 m²; 0/10 seed dương)  có ý nghĩa
+  [H2] holes    grugat+blame10%    − grugat          -0.069 [ -0.108,  -0.033]  ( -0.40 m²; 0/10 seed dương)  có ý nghĩa
+  [H2] coverage oracle             − none            +0.637 [ +0.517,  +0.772]  ( +3.67 m²; 10/10 seed dương)  có ý nghĩa
+  [H3] coverage oracle             − heur_oracle    +14.513 [+13.373, +15.806]  (+83.60 m²; 10/10 seed dương)  có ý nghĩa
+  [H3] coverage grugat             − heur_grugat    +13.534 [+12.349, +14.806]  (+77.95 m²; 10/10 seed dương)  có ý nghĩa
+
+-> results/runs_pro/e8/E8_summary.json
