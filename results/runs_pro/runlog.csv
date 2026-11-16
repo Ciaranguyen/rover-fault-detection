@@ -18,3 +18,4 @@ date,run_id,experiment,model,config,data_split,seed,account,gpu,duration_min,git
 2026-11-16,E3E7-v2-20seed,E3/E7,all,"20 seed, bootstrap 2 tang",test+ood,10-29,pro,Tesla T4,19.53,6e5db95,"E3_final_*.json, E7_fair_*.json",
 2026-11-16,E8-train-10-19,E8,mappo,"300 iters x 64 env, trust noisy",sim online,10-19,pro,Tesla T4,47.23,ad23cf8,results/runs_pro/e8/,
 2026-11-16,E8-eval-10-19,E8,all,"10 dieu kien, 300 ep",sim online,10-19,pro,Tesla T4,17.05,dfdecae,results/runs_pro/e8/eval_s*.json,
+2026-11-16,E8-eval-20-29,E8,all,"10 dieu kien, 300 ep",sim online,20-29,pro,CPU,74.49,511f705,results/runs_pro/e8/eval_s*.json,

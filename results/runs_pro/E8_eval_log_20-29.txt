@@ -1,0 +1,113 @@
+Thiết bị: cpu
+  logistic sẵn sàng (0.7 phút)
+  seed 20 | none               holes(lỗi) 0.0198 phủ(lỗi) 0.9728 phủ(không lỗi) 0.9818 báo nhầm/mốc 0.0000
+  seed 20 | oracle             holes(lỗi) 0.0109 phủ(lỗi) 0.9797 phủ(không lỗi) 0.9818 báo nhầm/mốc 0.0000
+  seed 20 | logistic           holes(lỗi) 0.0120 phủ(lỗi) 0.9744 phủ(không lỗi) 0.9824 báo nhầm/mốc 0.0371
+  seed 20 | gru                holes(lỗi) 0.0060 phủ(lỗi) 0.9685 phủ(không lỗi) 0.9732 báo nhầm/mốc 0.2183
+  seed 20 | grugat             holes(lỗi) 0.0088 phủ(lỗi) 0.9743 phủ(không lỗi) 0.9805 báo nhầm/mốc 0.0859
+  seed 20 | grugat+blame0.7%   holes(lỗi) 0.0087 phủ(lỗi) 0.9741 phủ(không lỗi) 0.9805 báo nhầm/mốc 0.0871
+  seed 20 | grugat+blame2.1%   holes(lỗi) 0.0086 phủ(lỗi) 0.9737 phủ(không lỗi) 0.9805 báo nhầm/mốc 0.0884
+  seed 20 | grugat+blame10%    holes(lỗi) 0.0083 phủ(lỗi) 0.9711 phủ(không lỗi) 0.9805 báo nhầm/mốc 0.0950
+  seed 20 | heur_oracle        holes(lỗi) 0.0078 phủ(lỗi) 0.8345 phủ(không lỗi) 0.8409 báo nhầm/mốc 0.0000
+  seed 20 | heur_grugat        holes(lỗi) 0.0078 phủ(lỗi) 0.8357 phủ(không lỗi) 0.8455 báo nhầm/mốc 0.0194
+-> results/runs_pro/e8/eval_s20.json (7.0 phút)
+  seed 21 | none               holes(lỗi) 0.0196 phủ(lỗi) 0.9736 phủ(không lỗi) 0.9833 báo nhầm/mốc 0.0000
+  seed 21 | oracle             holes(lỗi) 0.0106 phủ(lỗi) 0.9802 phủ(không lỗi) 0.9833 báo nhầm/mốc 0.0000
+  seed 21 | logistic           holes(lỗi) 0.0116 phủ(lỗi) 0.9751 phủ(không lỗi) 0.9834 báo nhầm/mốc 0.0379
+  seed 21 | gru                holes(lỗi) 0.0079 phủ(lỗi) 0.9715 phủ(không lỗi) 0.9803 báo nhầm/mốc 0.1543
+  seed 21 | grugat             holes(lỗi) 0.0081 phủ(lỗi) 0.9745 phủ(không lỗi) 0.9818 báo nhầm/mốc 0.1056
+  seed 21 | grugat+blame0.7%   holes(lỗi) 0.0080 phủ(lỗi) 0.9748 phủ(không lỗi) 0.9818 báo nhầm/mốc 0.1063
+  seed 21 | grugat+blame2.1%   holes(lỗi) 0.0079 phủ(lỗi) 0.9747 phủ(không lỗi) 0.9818 báo nhầm/mốc 0.1079
+  seed 21 | grugat+blame10%    holes(lỗi) 0.0074 phủ(lỗi) 0.9735 phủ(không lỗi) 0.9818 báo nhầm/mốc 0.1146
+  seed 21 | heur_oracle        holes(lỗi) 0.0078 phủ(lỗi) 0.8345 phủ(không lỗi) 0.8409 báo nhầm/mốc 0.0000
+  seed 21 | heur_grugat        holes(lỗi) 0.0078 phủ(lỗi) 0.8354 phủ(không lỗi) 0.8492 báo nhầm/mốc 0.0258
+-> results/runs_pro/e8/eval_s21.json (7.1 phút)
+  seed 22 | none               holes(lỗi) 0.0189 phủ(lỗi) 0.9715 phủ(không lỗi) 0.9823 báo nhầm/mốc 0.0000
+  seed 22 | oracle             holes(lỗi) 0.0108 phủ(lỗi) 0.9800 phủ(không lỗi) 0.9823 báo nhầm/mốc 0.0000
+  seed 22 | logistic           holes(lỗi) 0.0114 phủ(lỗi) 0.9754 phủ(không lỗi) 0.9822 báo nhầm/mốc 0.0314
+  seed 22 | gru                holes(lỗi) 0.0072 phủ(lỗi) 0.9712 phủ(không lỗi) 0.9798 báo nhầm/mốc 0.2228
+  seed 22 | grugat             holes(lỗi) 0.0098 phủ(lỗi) 0.9748 phủ(không lỗi) 0.9827 báo nhầm/mốc 0.0815
+  seed 22 | grugat+blame0.7%   holes(lỗi) 0.0096 phủ(lỗi) 0.9746 phủ(không lỗi) 0.9827 báo nhầm/mốc 0.0830
+  seed 22 | grugat+blame2.1%   holes(lỗi) 0.0094 phủ(lỗi) 0.9744 phủ(không lỗi) 0.9827 báo nhầm/mốc 0.0842
+  seed 22 | grugat+blame10%    holes(lỗi) 0.0080 phủ(lỗi) 0.9738 phủ(không lỗi) 0.9827 báo nhầm/mốc 0.0900
+  seed 22 | heur_oracle        holes(lỗi) 0.0078 phủ(lỗi) 0.8345 phủ(không lỗi) 0.8409 báo nhầm/mốc 0.0000
+  seed 22 | heur_grugat        holes(lỗi) 0.0093 phủ(lỗi) 0.8434 phủ(không lỗi) 0.8431 báo nhầm/mốc 0.0115
+-> results/runs_pro/e8/eval_s22.json (6.9 phút)
+  seed 23 | none               holes(lỗi) 0.0176 phủ(lỗi) 0.9749 phủ(không lỗi) 0.9829 báo nhầm/mốc 0.0000
+  seed 23 | oracle             holes(lỗi) 0.0102 phủ(lỗi) 0.9806 phủ(không lỗi) 0.9829 báo nhầm/mốc 0.0000
+  seed 23 | logistic           holes(lỗi) 0.0110 phủ(lỗi) 0.9765 phủ(không lỗi) 0.9831 báo nhầm/mốc 0.0360
+  seed 23 | gru                holes(lỗi) 0.0061 phủ(lỗi) 0.9705 phủ(không lỗi) 0.9763 báo nhầm/mốc 0.2245
+  seed 23 | grugat             holes(lỗi) 0.0067 phủ(lỗi) 0.9747 phủ(không lỗi) 0.9803 báo nhầm/mốc 0.1211
+  seed 23 | grugat+blame0.7%   holes(lỗi) 0.0067 phủ(lỗi) 0.9744 phủ(không lỗi) 0.9803 báo nhầm/mốc 0.1215
+  seed 23 | grugat+blame2.1%   holes(lỗi) 0.0066 phủ(lỗi) 0.9741 phủ(không lỗi) 0.9803 báo nhầm/mốc 0.1215
+  seed 23 | grugat+blame10%    holes(lỗi) 0.0064 phủ(lỗi) 0.9727 phủ(không lỗi) 0.9803 báo nhầm/mốc 0.1248
+  seed 23 | heur_oracle        holes(lỗi) 0.0078 phủ(lỗi) 0.8345 phủ(không lỗi) 0.8409 báo nhầm/mốc 0.0000
+  seed 23 | heur_grugat        holes(lỗi) 0.0091 phủ(lỗi) 0.8371 phủ(không lỗi) 0.8383 báo nhầm/mốc 0.0141
+-> results/runs_pro/e8/eval_s23.json (7.4 phút)
+  seed 24 | none               holes(lỗi) 0.0194 phủ(lỗi) 0.9749 phủ(không lỗi) 0.9839 báo nhầm/mốc 0.0000
+  seed 24 | oracle             holes(lỗi) 0.0108 phủ(lỗi) 0.9815 phủ(không lỗi) 0.9839 báo nhầm/mốc 0.0000
+  seed 24 | logistic           holes(lỗi) 0.0114 phủ(lỗi) 0.9768 phủ(không lỗi) 0.9848 báo nhầm/mốc 0.0369
+  seed 24 | gru                holes(lỗi) 0.0067 phủ(lỗi) 0.9735 phủ(không lỗi) 0.9803 báo nhầm/mốc 0.1865
+  seed 24 | grugat             holes(lỗi) 0.0091 phủ(lỗi) 0.9757 phủ(không lỗi) 0.9803 báo nhầm/mốc 0.1208
+  seed 24 | grugat+blame0.7%   holes(lỗi) 0.0090 phủ(lỗi) 0.9758 phủ(không lỗi) 0.9803 báo nhầm/mốc 0.1220
+  seed 24 | grugat+blame2.1%   holes(lỗi) 0.0091 phủ(lỗi) 0.9754 phủ(không lỗi) 0.9803 báo nhầm/mốc 0.1230
+  seed 24 | grugat+blame10%    holes(lỗi) 0.0079 phủ(lỗi) 0.9744 phủ(không lỗi) 0.9803 báo nhầm/mốc 0.1283
+  seed 24 | heur_oracle        holes(lỗi) 0.0078 phủ(lỗi) 0.8345 phủ(không lỗi) 0.8409 báo nhầm/mốc 0.0000
+  seed 24 | heur_grugat        holes(lỗi) 0.0080 phủ(lỗi) 0.8357 phủ(không lỗi) 0.8443 báo nhầm/mốc 0.0224
+-> results/runs_pro/e8/eval_s24.json (7.9 phút)
+  seed 25 | none               holes(lỗi) 0.0186 phủ(lỗi) 0.9739 phủ(không lỗi) 0.9830 báo nhầm/mốc 0.0000
+  seed 25 | oracle             holes(lỗi) 0.0114 phủ(lỗi) 0.9779 phủ(không lỗi) 0.9830 báo nhầm/mốc 0.0000
+  seed 25 | logistic           holes(lỗi) 0.0115 phủ(lỗi) 0.9740 phủ(không lỗi) 0.9822 báo nhầm/mốc 0.0347
+  seed 25 | gru                holes(lỗi) 0.0072 phủ(lỗi) 0.9675 phủ(không lỗi) 0.9726 báo nhầm/mốc 0.1878
+  seed 25 | grugat             holes(lỗi) 0.0085 phủ(lỗi) 0.9731 phủ(không lỗi) 0.9800 báo nhầm/mốc 0.0919
+  seed 25 | grugat+blame0.7%   holes(lỗi) 0.0082 phủ(lỗi) 0.9726 phủ(không lỗi) 0.9800 báo nhầm/mốc 0.0932
+  seed 25 | grugat+blame2.1%   holes(lỗi) 0.0082 phủ(lỗi) 0.9725 phủ(không lỗi) 0.9800 báo nhầm/mốc 0.0946
+  seed 25 | grugat+blame10%    holes(lỗi) 0.0079 phủ(lỗi) 0.9700 phủ(không lỗi) 0.9800 báo nhầm/mốc 0.1009
+  seed 25 | heur_oracle        holes(lỗi) 0.0078 phủ(lỗi) 0.8345 phủ(không lỗi) 0.8409 báo nhầm/mốc 0.0000
+  seed 25 | heur_grugat        holes(lỗi) 0.0089 phủ(lỗi) 0.8387 phủ(không lỗi) 0.8440 báo nhầm/mốc 0.0142
+-> results/runs_pro/e8/eval_s25.json (7.8 phút)
+  seed 26 | none               holes(lỗi) 0.0192 phủ(lỗi) 0.9727 phủ(không lỗi) 0.9837 báo nhầm/mốc 0.0000
+  seed 26 | oracle             holes(lỗi) 0.0100 phủ(lỗi) 0.9803 phủ(không lỗi) 0.9837 báo nhầm/mốc 0.0000
+  seed 26 | logistic           holes(lỗi) 0.0116 phủ(lỗi) 0.9747 phủ(không lỗi) 0.9835 báo nhầm/mốc 0.0364
+  seed 26 | gru                holes(lỗi) 0.0060 phủ(lỗi) 0.9667 phủ(không lỗi) 0.9768 báo nhầm/mốc 0.2067
+  seed 26 | grugat             holes(lỗi) 0.0086 phủ(lỗi) 0.9749 phủ(không lỗi) 0.9794 báo nhầm/mốc 0.1255
+  seed 26 | grugat+blame0.7%   holes(lỗi) 0.0085 phủ(lỗi) 0.9751 phủ(không lỗi) 0.9794 báo nhầm/mốc 0.1257
+  seed 26 | grugat+blame2.1%   holes(lỗi) 0.0083 phủ(lỗi) 0.9750 phủ(không lỗi) 0.9794 báo nhầm/mốc 0.1266
+  seed 26 | grugat+blame10%    holes(lỗi) 0.0081 phủ(lỗi) 0.9719 phủ(không lỗi) 0.9794 báo nhầm/mốc 0.1315
+  seed 26 | heur_oracle        holes(lỗi) 0.0078 phủ(lỗi) 0.8345 phủ(không lỗi) 0.8409 báo nhầm/mốc 0.0000
+  seed 26 | heur_grugat        holes(lỗi) 0.0083 phủ(lỗi) 0.8377 phủ(không lỗi) 0.8422 báo nhầm/mốc 0.0146
+-> results/runs_pro/e8/eval_s26.json (7.3 phút)
+  seed 27 | none               holes(lỗi) 0.0188 phủ(lỗi) 0.9739 phủ(không lỗi) 0.9839 báo nhầm/mốc 0.0000
+  seed 27 | oracle             holes(lỗi) 0.0107 phủ(lỗi) 0.9800 phủ(không lỗi) 0.9839 báo nhầm/mốc 0.0000
+  seed 27 | logistic           holes(lỗi) 0.0109 phủ(lỗi) 0.9747 phủ(không lỗi) 0.9829 báo nhầm/mốc 0.0374
+  seed 27 | gru                holes(lỗi) 0.0070 phủ(lỗi) 0.9728 phủ(không lỗi) 0.9757 báo nhầm/mốc 0.2093
+  seed 27 | grugat             holes(lỗi) 0.0090 phủ(lỗi) 0.9754 phủ(không lỗi) 0.9791 báo nhầm/mốc 0.1055
+  seed 27 | grugat+blame0.7%   holes(lỗi) 0.0091 phủ(lỗi) 0.9754 phủ(không lỗi) 0.9791 báo nhầm/mốc 0.1064
+  seed 27 | grugat+blame2.1%   holes(lỗi) 0.0090 phủ(lỗi) 0.9746 phủ(không lỗi) 0.9791 báo nhầm/mốc 0.1073
+  seed 27 | grugat+blame10%    holes(lỗi) 0.0083 phủ(lỗi) 0.9732 phủ(không lỗi) 0.9791 báo nhầm/mốc 0.1141
+  seed 27 | heur_oracle        holes(lỗi) 0.0078 phủ(lỗi) 0.8345 phủ(không lỗi) 0.8409 báo nhầm/mốc 0.0000
+  seed 27 | heur_grugat        holes(lỗi) 0.0091 phủ(lỗi) 0.8411 phủ(không lỗi) 0.8442 báo nhầm/mốc 0.0159
+-> results/runs_pro/e8/eval_s27.json (7.5 phút)
+  seed 28 | none               holes(lỗi) 0.0197 phủ(lỗi) 0.9731 phủ(không lỗi) 0.9820 báo nhầm/mốc 0.0000
+  seed 28 | oracle             holes(lỗi) 0.0105 phủ(lỗi) 0.9797 phủ(không lỗi) 0.9820 báo nhầm/mốc 0.0000
+  seed 28 | logistic           holes(lỗi) 0.0116 phủ(lỗi) 0.9756 phủ(không lỗi) 0.9823 báo nhầm/mốc 0.0343
+  seed 28 | gru                holes(lỗi) 0.0063 phủ(lỗi) 0.9644 phủ(không lỗi) 0.9712 báo nhầm/mốc 0.2203
+  seed 28 | grugat             holes(lỗi) 0.0093 phủ(lỗi) 0.9751 phủ(không lỗi) 0.9808 báo nhầm/mốc 0.0850
+  seed 28 | grugat+blame0.7%   holes(lỗi) 0.0092 phủ(lỗi) 0.9745 phủ(không lỗi) 0.9808 báo nhầm/mốc 0.0864
+  seed 28 | grugat+blame2.1%   holes(lỗi) 0.0091 phủ(lỗi) 0.9742 phủ(không lỗi) 0.9808 báo nhầm/mốc 0.0876
+  seed 28 | grugat+blame10%    holes(lỗi) 0.0085 phủ(lỗi) 0.9728 phủ(không lỗi) 0.9808 báo nhầm/mốc 0.0946
+  seed 28 | heur_oracle        holes(lỗi) 0.0078 phủ(lỗi) 0.8345 phủ(không lỗi) 0.8409 báo nhầm/mốc 0.0000
+  seed 28 | heur_grugat        holes(lỗi) 0.0091 phủ(lỗi) 0.8420 phủ(không lỗi) 0.8429 báo nhầm/mốc 0.0129
+-> results/runs_pro/e8/eval_s28.json (7.5 phút)
+  seed 29 | none               holes(lỗi) 0.0180 phủ(lỗi) 0.9754 phủ(không lỗi) 0.9839 báo nhầm/mốc 0.0000
+  seed 29 | oracle             holes(lỗi) 0.0104 phủ(lỗi) 0.9804 phủ(không lỗi) 0.9839 báo nhầm/mốc 0.0000
+  seed 29 | logistic           holes(lỗi) 0.0106 phủ(lỗi) 0.9760 phủ(không lỗi) 0.9840 báo nhầm/mốc 0.0370
+  seed 29 | gru                holes(lỗi) 0.0069 phủ(lỗi) 0.9671 phủ(không lỗi) 0.9767 báo nhầm/mốc 0.2005
+  seed 29 | grugat             holes(lỗi) 0.0090 phủ(lỗi) 0.9722 phủ(không lỗi) 0.9824 báo nhầm/mốc 0.1036
+  seed 29 | grugat+blame0.7%   holes(lỗi) 0.0089 phủ(lỗi) 0.9720 phủ(không lỗi) 0.9824 báo nhầm/mốc 0.1044
+  seed 29 | grugat+blame2.1%   holes(lỗi) 0.0088 phủ(lỗi) 0.9711 phủ(không lỗi) 0.9824 báo nhầm/mốc 0.1061
+  seed 29 | grugat+blame10%    holes(lỗi) 0.0078 phủ(lỗi) 0.9688 phủ(không lỗi) 0.9824 báo nhầm/mốc 0.1134
+  seed 29 | heur_oracle        holes(lỗi) 0.0078 phủ(lỗi) 0.8345 phủ(không lỗi) 0.8409 báo nhầm/mốc 0.0000
+  seed 29 | heur_grugat        holes(lỗi) 0.0082 phủ(lỗi) 0.8377 phủ(không lỗi) 0.8453 báo nhầm/mốc 0.0217
+-> results/runs_pro/e8/eval_s29.json (7.3 phút)
+Tổng: 74.4 phút
