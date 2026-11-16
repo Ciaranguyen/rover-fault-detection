@@ -1,0 +1,12 @@
+Thiết bị: cuda
+  logistic sẵn sàng (1.0 phút)
+Traceback (most recent call last):
+  File "/content/rover-fault-detection/src/e8_eval.py", line 171, in <module>
+    main()
+    ~~~~^^
+  File "/content/rover-fault-detection/src/e8_eval.py", line 147, in main
+    model.load_state_dict(torch.load(find(f"results/runs_*/e8/policy_s{s}.pt"), weights_only=False)["state"])
+                                     ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/rover-fault-detection/src/e8_eval.py", line 61, in find
+    raise FileNotFoundError(pattern)
+FileNotFoundError: results/runs_*/e8/policy_s10.pt

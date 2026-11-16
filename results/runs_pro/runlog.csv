@@ -16,3 +16,4 @@ date,run_id,experiment,model,config,data_split,seed,account,gpu,duration_min,git
 2026-11-16,E7-fair,E7,all,AUROC + thr val cung dk + oracle,test+ood,10-14,pro,Tesla T4,5.74,a7e7b5d,results/runs_pro/E7_fair_*.json,
 2026-11-16,E2-grugat-ext,E2,grugat,h64 lr3e-3,train/val,15-29,pro,Tesla T4,49.75,8458780,results/runs_pro/E2_grugat_report_s15-29.json,
 2026-11-16,E3E7-v2-20seed,E3/E7,all,"20 seed, bootstrap 2 tang",test+ood,10-29,pro,Tesla T4,19.53,6e5db95,"E3_final_*.json, E7_fair_*.json",
+2026-11-16,E8-train-10-19,E8,mappo,"300 iters x 64 env, trust noisy",sim online,10-19,pro,Tesla T4,47.23,ad23cf8,results/runs_pro/e8/,
