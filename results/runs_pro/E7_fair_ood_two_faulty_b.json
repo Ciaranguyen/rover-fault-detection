@@ -559,97 +559,97 @@
    ]
   },
   "gat": {
-   "n_seeds": 5,
+   "n_seeds": 20,
    "summary": {
     "auroc": [
-     0.8072300411850334,
-     0.015844672085896367
+     0.8041689531571311,
+     0.013656404070598897
     ],
     "auprc": [
-     0.7490549728517084,
-     0.013591452623193924
+     0.7419826948433881,
+     0.012150561650922027
     ],
     "val_chuan": {
      "fpr": [
-      0.02251792412516025,
-      0.00264703073656241
+      0.022831180855609895,
+      0.0028322668787011387
      ],
      "recall": [
-      0.5162063867534004,
-      0.017607808396271695
+      0.5040246156120638,
+      0.01977340585653833
      ],
      "groups": {
       "l\u1ed7i | t\u1ea5t c\u1ea3": [
-       0.5162063867534004,
-       0.017607808396271695
+       0.5040246156120638,
+       0.01977340585653833
       ],
       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
-       0.4583282800106726,
-       0.023138118747420545
+       0.4413836805976666,
+       0.027907368339441657
       ],
       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
-       0.6065460190057926,
-       0.017518943807504704
+       0.6017983568697233,
+       0.014969503458229316
       ],
       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": [
-       0.027446053446386887,
-       0.0034662735539319877
+       0.027780093364454812,
+       0.0035736771019858732
       ]
      }
     },
     "oracle": {
      "fpr": [
-      0.010001899245050093,
-      0.0
+      0.010001899245050095,
+      1.7797887332061147e-18
      ],
      "recall": [
-      0.43490242460082795,
-      0.012076055358224988
+      0.4163538586635127,
+      0.027823497894770635
      ],
      "groups": {
       "l\u1ed7i | t\u1ea5t c\u1ea3": [
-       0.43490242460082795,
-       0.012076055358224988
+       0.4163538586635127,
+       0.027823497894770635
       ],
       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
-       0.37956193756518786,
-       0.01587200801166151
+       0.3571682392606787,
+       0.03367031392227997
       ],
       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
-       0.5212811872941354,
-       0.014490759538994214
+       0.5087343353651611,
+       0.02473172922076062
       ],
       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": [
-       0.012389844233792217,
-       3.7517229557527406e-05
+       0.012384634163768875,
+       8.842982269505306e-05
       ]
      }
     },
     "val_cung_dk": {
      "fpr": [
-      0.009994302264849722,
-      0.0003721230089911301
+      0.010314918569868476,
+      0.00041655068492172406
      ],
      "recall": [
-      0.4345136014192786,
-      0.014396876346087719
+      0.4193602158486103,
+      0.026242763693340082
      ],
      "groups": {
       "l\u1ed7i | t\u1ea5t c\u1ea3": [
-       0.4345136014192786,
-       0.014396876346087719
+       0.4193602158486103,
+       0.026242763693340082
       ],
       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
-       0.3791107769180392,
-       0.01725732428584595
+       0.3600759211196546,
+       0.032122845461226006
       ],
       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
-       0.5209896641805172,
-       0.016970096636494496
+       0.5118947109377958,
+       0.023503249543980687
       ],
       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": [
-       0.012380317248606679,
-       0.00046765279210786084
+       0.012768541894917353,
+       0.0005276798108866567
       ]
      }
     }
@@ -839,101 +839,656 @@
        "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012471419044443386
       }
      }
+    },
+    {
+     "auroc": 0.8086358260460147,
+     "auprc": 0.7558760183740697,
+     "val_chuan": {
+      "thr": 0.8807562589645386,
+      "fpr": 0.02184369213237738,
+      "recall": 0.5301670609107038,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5301670609107038,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.4807043927523225,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.607371370158634,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.026651741056542656
+      }
+     },
+     "oracle": {
+      "thr": 0.9717145562171936,
+      "fpr": 0.010001899245050093,
+      "recall": 0.456327616794796,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.456327616794796,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.4120721857035438,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5254041570438799,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012370194826847045
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9677578210830688,
+      "fpr": 0.010640520393143725,
+      "recall": 0.46166469544648137,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.46166469544648137,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.4171659349455454,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5311210388823685,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.013168079836135854
+      }
+     }
+    },
+    {
+     "auroc": 0.786077123230454,
+     "auprc": 0.729736750494615,
+     "val_chuan": {
+      "thr": 0.8746220469474792,
+      "fpr": 0.01963344570533213,
+      "recall": 0.4853489059727972,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.4853489059727972,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.4250369903218764,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5794873736417673,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.023784713952269804
+      }
+     },
+     "oracle": {
+      "thr": 0.9599359631538391,
+      "fpr": 0.010001899245050093,
+      "recall": 0.42329982259018334,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.42329982259018334,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.366846969219201,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5114148336046643,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.01239698947268137
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.960928201675415,
+      "fpr": 0.009795356345852524,
+      "recall": 0.4216883500887049,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.4216883500887049,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.3655250200111577,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5093514557225609,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012140951745820035
+      }
+     }
+    },
+    {
+     "auroc": 0.8290722904025566,
+     "auprc": 0.7525892827838688,
+     "val_chuan": {
+      "thr": 0.8937671184539795,
+      "fpr": 0.026978775936565214,
+      "recall": 0.5130470136014192,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5130470136014192,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.4505299924806559,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6106273425964487,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.032674582003524986
+      }
+     },
+     "oracle": {
+      "thr": 0.979232132434845,
+      "fpr": 0.010001899245050093,
+      "recall": 0.38586635127143704,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.38586635127143704,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.3217794164018726,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.4858970961269072,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012429738484256657
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9767200350761414,
+      "fpr": 0.010763971321399744,
+      "recall": 0.3944041986989947,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.3944041986989947,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.33041453416450384,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.4942831181615114,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.01333480207688277
+      }
+     }
+    },
+    {
+     "auroc": 0.8072516338028106,
+     "auprc": 0.7419225635247795,
+     "val_chuan": {
+      "thr": 0.9042553305625916,
+      "fpr": 0.02224490764920944,
+      "recall": 0.48962891780011825,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.48962891780011825,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.4153831227108448,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6055162230719722,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.02689884723479255
+      }
+     },
+     "oracle": {
+      "thr": 0.9753453135490417,
+      "fpr": 0.010001899245050093,
+      "recall": 0.4100606150206978,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.4100606150206978,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.33823707764329203,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5221671146783781,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012367217643976563
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9744865298271179,
+      "fpr": 0.010267793552063056,
+      "recall": 0.41203429923122414,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.41203429923122414,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.3401775535450069,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5241926324158558,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012697684942599914
+      }
+     }
+    },
+    {
+     "auroc": 0.814014610907403,
+     "auprc": 0.7413953579004985,
+     "val_chuan": {
+      "thr": 0.9069291353225708,
+      "fpr": 0.02378567019609705,
+      "recall": 0.4794574216439976,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.4794574216439976,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.42398185655031895,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5660470222996252,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.028411256132996714
+      }
+     },
+     "oracle": {
+      "thr": 0.9659656286239624,
+      "fpr": 0.010001899245050093,
+      "recall": 0.38444707273802486,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.38444707273802486,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.33196691488587576,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.46636126150001894,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.01212011146572667
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9648643732070923,
+      "fpr": 0.01031527467831537,
+      "recall": 0.38725606150206976,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.38725606150206976,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.3344895335581051,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.46961723393783367,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012501190873148191
+      }
+     }
+    },
+    {
+     "auroc": 0.8301611331493625,
+     "auprc": 0.7565507491672138,
+     "val_chuan": {
+      "thr": 0.8948467373847961,
+      "fpr": 0.027747970181852714,
+      "recall": 0.5233811354228267,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5233811354228267,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.46015960414291607,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6220611062734259,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.03421080836469299
+      }
+     },
+     "oracle": {
+      "thr": 0.981092095375061,
+      "fpr": 0.010001899245050093,
+      "recall": 0.38077321111768186,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.38077321111768186,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.3275644601838601,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.46382463181009354,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.01253989425046444
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9794576168060303,
+      "fpr": 0.010614405773704953,
+      "recall": 0.3873373743347132,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.3873373743347132,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.3341256943265336,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.4703933669026616,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.013302053065307483
+      }
+     }
+    },
+    {
+     "auroc": 0.8039122907562783,
+     "auprc": 0.7482206678675773,
+     "val_chuan": {
+      "thr": 0.8741346597671509,
+      "fpr": 0.02168225630311951,
+      "recall": 0.5177409816676523,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5177409816676523,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.4633250054575885,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6026767122250407,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.026583265850521603
+      }
+     },
+     "oracle": {
+      "thr": 0.9677982330322266,
+      "fpr": 0.010001899245050093,
+      "recall": 0.4405751034890597,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.4405751034890597,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.3880830523685934,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5225078559800098,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.01239698947268137
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9650574922561646,
+      "fpr": 0.01057167276007787,
+      "recall": 0.4451581904198699,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.4451581904198699,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.39233997137798043,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5276000454321735,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.013105558995855762
+      }
+     }
+    },
+    {
+     "auroc": 0.8076100462846917,
+     "auprc": 0.7503015571280484,
+     "val_chuan": {
+      "thr": 0.885045051574707,
+      "fpr": 0.024277099852808508,
+      "recall": 0.5328282081608515,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5328282081608515,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.4843912969655808,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.608431454208155,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.029527699709426952
+      }
+     },
+     "oracle": {
+      "thr": 0.984844446182251,
+      "fpr": 0.010001899245050093,
+      "recall": 0.43588113542282675,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.43588113542282675,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.3890775462682223,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5089349941316775,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012382103558328967
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9807062149047852,
+      "fpr": 0.011084468923602868,
+      "recall": 0.4460304553518628,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.4460304553518628,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.399070997162054,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5193276038314466,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.013721835850045253
+      }
+     }
+    },
+    {
+     "auroc": 0.7910355811058082,
+     "auprc": 0.7325383268404281,
+     "val_chuan": {
+      "thr": 0.8841574788093567,
+      "fpr": 0.020594938511941503,
+      "recall": 0.4969988172678888,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.4969988172678888,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.439554175661581,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5866618710483474,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.02506490258657648
+      }
+     },
+     "oracle": {
+      "thr": 0.9624139070510864,
+      "fpr": 0.010001899245050093,
+      "recall": 0.426737137788291,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.426737137788291,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.37289882843767436,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5107712111460265,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.01239103510694041
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9629887938499451,
+      "fpr": 0.009868952091543612,
+      "recall": 0.42570224719101124,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.42570224719101124,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.3718679506148883,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5097300571688184,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012227290049063973
+      }
+     }
+    },
+    {
+     "auroc": 0.7967407570132726,
+     "auprc": 0.7327316710980485,
+     "val_chuan": {
+      "thr": 0.8993952870368958,
+      "fpr": 0.018007217131190353,
+      "recall": 0.470764340626848,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.470764340626848,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.3868823829044073,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6016923484647712,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.021501214690611156
+      }
+     },
+     "oracle": {
+      "thr": 0.9582195281982422,
+      "fpr": 0.010001899245050093,
+      "recall": 0.41493938497930216,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.41493938497930216,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.3347927329177481,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5400371029417332,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.01220942695184109
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.954251229763031,
+      "fpr": 0.010505199183324628,
+      "recall": 0.42004730928444706,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.42004730928444706,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.3396196667232639,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5455836141294059,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012810817891678178
+      }
+     }
+    },
+    {
+     "auroc": 0.7996374412554437,
+     "auprc": 0.7209907791928768,
+     "val_chuan": {
+      "thr": 0.8978297710418701,
+      "fpr": 0.028469683300887897,
+      "recall": 0.4837448255470136,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.4837448255470136,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.41076236446988623,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5976602430621285,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.03484494831610537
+      }
+     },
+     "oracle": {
+      "thr": 0.9891417026519775,
+      "fpr": 0.010001899245050093,
+      "recall": 0.34323625073920755,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.34323625073920755,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.2756446018386009,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.44873736417673116,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.01248630495879579
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9871934652328491,
+      "fpr": 0.010752101039836665,
+      "recall": 0.35359994086339447,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.35359994086339447,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.2859533800664613,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.45918676409343884,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.013394345734292382
+      }
+     }
+    },
+    {
+     "auroc": 0.7942558267779569,
+     "auprc": 0.7336988357383812,
+     "val_chuan": {
+      "thr": 0.8621336221694946,
+      "fpr": 0.02233274773277622,
+      "recall": 0.49006505026611474,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.49006505026611474,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.42396972857593324,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5932306061409155,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.027577644929262134
+      }
+     },
+     "oracle": {
+      "thr": 0.960957944393158,
+      "fpr": 0.010001899245050093,
+      "recall": 0.4098018923713779,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.4098018923713779,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.3470662429960948,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5077234695036535,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012429738484256657
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9607633352279663,
+      "fpr": 0.010020891695551018,
+      "recall": 0.41008279124778235,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.41008279124778235,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.3473330584325806,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5080263506606595,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012453555947220502
+      }
+     }
+    },
+    {
+     "auroc": 0.7914488886120716,
+     "auprc": 0.7267985872249978,
+     "val_chuan": {
+      "thr": 0.8934921026229858,
+      "fpr": 0.022997483500308627,
+      "recall": 0.4857850384387936,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.4857850384387936,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.4081427220025711,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6069738386400636,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.028104606297337208
+      }
+     },
+     "oracle": {
+      "thr": 0.9763331413269043,
+      "fpr": 0.010001899245050093,
+      "recall": 0.39330277942046127,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.39330277942046127,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.31908700608824314,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5091432249271193,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012432715667127137
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9741291999816895,
+      "fpr": 0.010628650111580647,
+      "recall": 0.3986324659964518,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.3986324659964518,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.32430203507410194,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5146518759701663,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.013209760396322583
+      }
+     }
+    },
+    {
+     "auroc": 0.7924590855577324,
+     "auprc": 0.730953019948203,
+     "val_chuan": {
+      "thr": 0.8404273390769958,
+      "fpr": 0.023104316034376335,
+      "recall": 0.4983959195742164,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.4983959195742164,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.4229388507531472,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6161738537841215,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.02775032153575001
+      }
+     },
+     "oracle": {
+      "thr": 0.9593616724014282,
+      "fpr": 0.010001899245050093,
+      "recall": 0.40949881726788884,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.40949881726788884,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.33953477090256384,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5187029114451217,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012385080741199447
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9560105800628662,
+      "fpr": 0.010623901998955415,
+      "recall": 0.41438497930218804,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.41438497930218804,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.3437795619375652,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5245901639344263,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.013156171104653933
+      }
+     }
+    },
+    {
+     "auroc": 0.7949163223156015,
+     "auprc": 0.7400748653256132,
+     "val_chuan": {
+      "thr": 0.864525318145752,
+      "fpr": 0.02033379231755377,
+      "recall": 0.5021067415730337,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5021067415730337,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.4402697261503384,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5986256767500852,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.0247850473967513
+      }
+     },
+     "oracle": {
+      "thr": 0.9520363211631775,
+      "fpr": 0.010001899245050093,
+      "recall": 0.43781785925487876,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.43781785925487876,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.3809032915322483,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5266535418165298,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012405921021292812
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9529803395271301,
+      "fpr": 0.009873700204168842,
+      "recall": 0.4366129509166174,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.4366129509166174,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.37979964586314796,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5252905766100027,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012245153146286858
+      }
+     }
     }
    ]
   },
   "gru": {
-   "n_seeds": 5,
+   "n_seeds": 20,
    "summary": {
     "auroc": [
-     0.950264024334035,
-     0.005890657934219724
+     0.9504571802722461,
+     0.006179562980879537
     ],
     "auprc": [
-     0.9073963386862914,
-     0.00852881538140081
+     0.9064122584271012,
+     0.00989437613311755
     ],
     "val_chuan": {
      "fpr": [
-      0.06369450643369261,
-      0.012468989966301743
+      0.061262641849864685,
+      0.012805732567662868
      ],
      "recall": [
-      0.8276271437019516,
-      0.009569007867460393
+      0.8196935984624483,
+      0.018201182650643424
      ],
      "groups": {
       "l\u1ed7i | t\u1ea5t c\u1ea3": [
-       0.8276271437019516,
-       0.009569007867460393
+       0.8196935984624483,
+       0.018201182650643424
       ],
       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
-       0.8162320809178449,
-       0.010831518978287326
+       0.8062598539791883,
+       0.020053302951816114
       ],
       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
-       0.8454132434785901,
-       0.008840591033124425
+       0.8406617953280581,
+       0.016125516118342436
       ],
       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": [
-       0.07314461963511647,
-       0.013431277762363822
+       0.07038477111418093,
+       0.014233717570399769
       ]
      }
     },
     "oracle": {
      "fpr": [
-      0.010001899245050093,
-      0.0
+      0.010001899245050095,
+      1.7797887332061147e-18
      ],
      "recall": [
-      0.6682037256061502,
-      0.03258786681263775
+      0.6629442637492609,
+      0.03756134985211706
      ],
      "groups": {
       "l\u1ed7i | t\u1ea5t c\u1ea3": [
-       0.6682037256061502,
-       0.03258786681263775
+       0.6629442637492609,
+       0.03756134985211706
       ],
       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
-       0.6564508695757634,
-       0.033757315316550456
+       0.6513607587260776,
+       0.03751031400517995
       ],
       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
-       0.6865482906144702,
-       0.030829575862314294
+       0.6810244955135729,
+       0.037934432852563614
       ],
       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": [
-       0.01200340589720383,
-       0.00016053890994342324
+       0.011915430143381128,
+       0.00021035429559892766
       ]
      }
     },
     "val_cung_dk": {
      "fpr": [
-      0.009945871516072362,
-      0.0006302853484888285
+      0.009635819761644746,
+      0.0008663871403351552
      ],
      "recall": [
-      0.6668628030751035,
-      0.03314197399063504
+      0.6581412625665287,
+      0.03522292697145966
      ],
      "groups": {
       "l\u1ed7i | t\u1ea5t c\u1ea3": [
-       0.6668628030751035,
-       0.03314197399063504
+       0.6581412625665287,
+       0.03522292697145966
       ],
       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
-       0.6549930870546,
-       0.03416046783649169
+       0.646547165692386,
+       0.03519023065156417
       ],
       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
-       0.685389770188922,
-       0.03162643107950542
+       0.676238026729262,
+       0.03565674099331016
       ],
       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": [
-       0.011939098747201449,
-       0.0008376006520617582
+       0.011497433668365645,
+       0.0010650850613088097
       ]
      }
     }
@@ -1121,6 +1676,561 @@
        "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6950663400198899,
        "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.7225608601824859,
        "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.013087695898632878
+      }
+     }
+    },
+    {
+     "auroc": 0.9365865928809449,
+     "auprc": 0.878116520102966,
+     "val_chuan": {
+      "thr": 0.778974175453186,
+      "fpr": 0.06496367693841698,
+      "recall": 0.7773580721466588,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.7773580721466588,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.7576709437989667,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8080869268920607,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.07467072357452484
+      }
+     },
+     "oracle": {
+      "thr": 0.9944427013397217,
+      "fpr": 0.010001899245050093,
+      "recall": 0.544182436428149,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.544182436428149,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5310112305042812,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5647408473100367,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011899799933311103
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9931533336639404,
+      "fpr": 0.010987132614785622,
+      "recall": 0.5584934949733885,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5584934949733885,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5446188177650568,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.580149926172718,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.013087695898632878
+      }
+     }
+    },
+    {
+     "auroc": 0.9539519089529187,
+     "auprc": 0.9108950349893105,
+     "val_chuan": {
+      "thr": 0.6680088043212891,
+      "fpr": 0.061345615117990596,
+      "recall": 0.8287995269071555,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.8287995269071555,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8155577655419992,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8494680649680082,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.07136605058829133
+      }
+     },
+     "oracle": {
+      "thr": 0.9965261816978455,
+      "fpr": 0.010001899245050093,
+      "recall": 0.6653163808397398,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6653163808397398,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6565115094476921,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6790595540074963,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012057590625446578
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.997208833694458,
+      "fpr": 0.009368026209581692,
+      "recall": 0.6571185688941454,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6571185688941454,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6487132219176753,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.670238140309696,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011325203639308341
+      }
+     }
+    },
+    {
+     "auroc": 0.9514457418116606,
+     "auprc": 0.9046888694113032,
+     "val_chuan": {
+      "thr": 0.706740140914917,
+      "fpr": 0.07538815820711267,
+      "recall": 0.8360585452395033,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.8360585452395033,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8223615591723871,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8574376254117291,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.08559103034344781
+      }
+     },
+     "oracle": {
+      "thr": 0.9991226196289062,
+      "fpr": 0.010001899245050093,
+      "recall": 0.6259092253104672,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6259092253104672,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6193271399810804,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6361829402188316,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012194541037488687
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9993255734443665,
+      "fpr": 0.009327667252267224,
+      "recall": 0.614591957421644,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.614591957421644,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.608157275571834,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6246355961079771,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011387724479588435
+      }
+     }
+    },
+    {
+     "auroc": 0.9536323622718818,
+     "auprc": 0.9130937991859839,
+     "val_chuan": {
+      "thr": 0.6609915494918823,
+      "fpr": 0.07218080812876881,
+      "recall": 0.8397915434654051,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.8397915434654051,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8308511412423897,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8537462613107182,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.08387319582718049
+      }
+     },
+     "oracle": {
+      "thr": 0.9958412647247314,
+      "fpr": 0.010001899245050093,
+      "recall": 0.6972279716144293,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6972279716144293,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6847818177408009,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.7166546776208685,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012132020197208594
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9961203336715698,
+      "fpr": 0.009743127106974978,
+      "recall": 0.6947664104080425,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6947664104080425,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6823440948892716,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.7141559080755688,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011831324727290048
+      }
+     }
+    },
+    {
+     "auroc": 0.9418693465590405,
+     "auprc": 0.9001172225146229,
+     "val_chuan": {
+      "thr": 0.659107506275177,
+      "fpr": 0.04173590997578463,
+      "recall": 0.7918317563571851,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.7918317563571851,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.7786402115118732,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8124219134517093,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.04887938836755109
+      }
+     },
+     "oracle": {
+      "thr": 0.9660894870758057,
+      "fpr": 0.010001899245050093,
+      "recall": 0.6730780603193377,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6730780603193377,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6620418657675795,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6903040169613448,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011792621349973801
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9722155332565308,
+      "fpr": 0.00928493423864014,
+      "recall": 0.6637640449438202,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6637640449438202,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6526548135930337,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6811040018172869,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.010961987329109702
+      }
+     }
+    },
+    {
+     "auroc": 0.9568218508406251,
+     "auprc": 0.9150115865819127,
+     "val_chuan": {
+      "thr": 0.7038644552230835,
+      "fpr": 0.07009401262997958,
+      "recall": 0.8387492607924305,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.8387492607924305,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8266306061561598,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8576647862794836,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.07992247415805269
+      }
+     },
+     "oracle": {
+      "thr": 0.997234046459198,
+      "fpr": 0.010001899245050093,
+      "recall": 0.6890005913660556,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6890005913660556,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6756251970795838,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.7098777117328589,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011679488400895537
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9984382390975952,
+      "fpr": 0.008207112672712596,
+      "recall": 0.6690198107628622,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6690198107628622,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6561234142673491,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6891492825502593,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.009622255037393416
+      }
+     }
+    },
+    {
+     "auroc": 0.9508652868420195,
+     "auprc": 0.9016395066805851,
+     "val_chuan": {
+      "thr": 0.7791029214859009,
+      "fpr": 0.07023408195242391,
+      "recall": 0.8166173861620343,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.8166173861620343,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8001552380721372,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8423124976337409,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.08035416567427238
+      }
+     },
+     "oracle": {
+      "thr": 0.9949014186859131,
+      "fpr": 0.010001899245050093,
+      "recall": 0.6592696629213484,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6592696629213484,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6470638174012177,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6783212811872942,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012087362454151384
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9948393106460571,
+      "fpr": 0.010063624709178102,
+      "recall": 0.6597427557658191,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6597427557658191,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6474276566327892,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6789649036459319,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.0121617920259134
+      }
+     }
+    },
+    {
+     "auroc": 0.9477695350122203,
+     "auprc": 0.9090424107003537,
+     "val_chuan": {
+      "thr": 0.6655974388122559,
+      "fpr": 0.036892835098048526,
+      "recall": 0.784594914251922,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.784594914251922,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.7694835908506561,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8081815772536252,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.04289822798075549
+      }
+     },
+     "oracle": {
+      "thr": 0.9137095212936401,
+      "fpr": 0.010001899245050093,
+      "recall": 0.6995269071555292,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6995269071555292,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6874742280544304,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.7183394540567145,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011733077692564188
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9311550855636597,
+      "fpr": 0.00829970086890461,
+      "recall": 0.6879213483146067,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6879213483146067,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6764377713634269,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.7058456063302162,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.009806840375363217
+      }
+     }
+    },
+    {
+     "auroc": 0.9591702931950419,
+     "auprc": 0.9164466124725694,
+     "val_chuan": {
+      "thr": 0.7473049163818359,
+      "fpr": 0.049472959498599305,
+      "recall": 0.8056475458308693,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.8056475458308693,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.7889004778421908,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8317873774277817,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.056107988377078075
+      }
+     },
+     "oracle": {
+      "thr": 0.9927521347999573,
+      "fpr": 0.010001899245050093,
+      "recall": 0.6836782968657599,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6836782968657599,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6690518349625245,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.7065081588611668,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011679488400895537
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9904575347900391,
+      "fpr": 0.011542661791937706,
+      "recall": 0.6939089296274393,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6939089296274393,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6783054794188275,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.718263733767463,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.013409231648644786
+      }
+     }
+    },
+    {
+     "auroc": 0.9451668576294996,
+     "auprc": 0.8992488666461345,
+     "val_chuan": {
+      "thr": 0.6071650385856628,
+      "fpr": 0.05584967475428517,
+      "recall": 0.8062019515079835,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.8062019515079835,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.7922114148494919,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8280392231098322,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.06564390511122756
+      }
+     },
+     "oracle": {
+      "thr": 0.9880945682525635,
+      "fpr": 0.010001899245050093,
+      "recall": 0.6511088113542283,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6511088113542283,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6403449195915298,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6679097414152122,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012081408088410423
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.990916907787323,
+      "fpr": 0.009111628127819191,
+      "recall": 0.6391853932584269,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6391853932584269,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6291265432847406,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6548858516639534,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011054279998094604
+      }
+     }
+    },
+    {
+     "auroc": 0.9428513636071937,
+     "auprc": 0.8920932592821781,
+     "val_chuan": {
+      "thr": 0.6770461797714233,
+      "fpr": 0.08712074450405964,
+      "recall": 0.8246156120638676,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.8246156120638676,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8159701166711136,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8381100215802825,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.09885735721430954
+      }
+     },
+     "oracle": {
+      "thr": 0.9982431530952454,
+      "fpr": 0.010001899245050093,
+      "recall": 0.6211487285629805,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6211487285629805,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.610910325757392,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6371294438344755,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011944457676368312
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9983195662498474,
+      "fpr": 0.00978586012060206,
+      "recall": 0.6192711413364873,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6192711413364873,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6090426177019914,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6352364366031878,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011688419949506978
+      }
+     }
+    },
+    {
+     "auroc": 0.9504416535069866,
+     "auprc": 0.907509640459087,
+     "val_chuan": {
+      "thr": 0.5980827808380127,
+      "fpr": 0.05660699871800959,
+      "recall": 0.8195150798344175,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.8195150798344175,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.804982171877653,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8421989171998637,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.06418806268756252
+      }
+     },
+     "oracle": {
+      "thr": 0.9911924600601196,
+      "fpr": 0.010001899245050093,
+      "recall": 0.6597205795387345,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6597205795387345,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6496470759453756,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6754439101957369,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.01145619968560949
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9924808144569397,
+      "fpr": 0.009448744124210626,
+      "recall": 0.6531933767001774,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6531933767001774,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6430979697770879,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6689508953924204,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.01085183156290192
+      }
+     }
+    },
+    {
+     "auroc": 0.9571839338525858,
+     "auprc": 0.9139557600315326,
+     "val_chuan": {
+      "thr": 0.7286177277565002,
+      "fpr": 0.05469350933004131,
+      "recall": 0.8258870490833826,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.8258870490833826,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8084629005263541,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8530837087797676,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.06182120230553041
+      }
+     },
+     "oracle": {
+      "thr": 0.9947597980499268,
+      "fpr": 0.010001899245050093,
+      "recall": 0.6761383796570077,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6761383796570077,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6590220001455357,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.7028546549047817,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011581241366169675
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9973223805427551,
+      "fpr": 0.008373296614595698,
+      "recall": 0.6525280898876404,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6525280898876404,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6348994590923424,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6800439177677658,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.009738365169342162
+      }
+     }
+    },
+    {
+     "auroc": 0.9546062788180742,
+     "auprc": 0.9148591308681654,
+     "val_chuan": {
+      "thr": 0.6756870746612549,
+      "fpr": 0.05829970086890461,
+      "recall": 0.8339000591366056,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.8339000591366056,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8172678099303854,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8598606746677773,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.06672759967608251
+      }
+     },
+     "oracle": {
+      "thr": 0.9965614080429077,
+      "fpr": 0.010001899245050093,
+      "recall": 0.6907081608515672,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6907081608515672,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6786086787784704,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.7095937606481657,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011944457676368312
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.996362030506134,
+      "fpr": 0.010210816200560278,
+      "recall": 0.6924526907155529,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6924526907155529,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6801610594998423,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.7116382084579563,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012179655123136283
+      }
+     }
+    },
+    {
+     "auroc": 0.9554604779940564,
+     "auprc": 0.9145452551838552,
+     "val_chuan": {
+      "thr": 0.5843884348869324,
+      "fpr": 0.05190161910640521,
+      "recall": 0.8261679479597871,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.8261679479597871,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8148907269507847,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.8437701132018325,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.061070952222169295
+      }
+     },
+     "oracle": {
+      "thr": 0.9821092486381531,
+      "fpr": 0.010001899245050093,
+      "recall": 0.6818524541691307,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6818524541691307,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6735391854852403,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6948283042441222,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.01202781879674177
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9858226776123047,
+      "fpr": 0.009232704999762595,
+      "recall": 0.672553222945003,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.672553222945003,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6648676837994518,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6845492749782304,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011146572667079503
       }
      }
     }
@@ -1411,97 +2521,97 @@
    ]
   },
   "grugat": {
-   "n_seeds": 5,
+   "n_seeds": 20,
    "summary": {
     "auroc": [
-     0.8517023289755665,
-     0.028591326365971108
+     0.855601103187975,
+     0.025582341496650212
     ],
     "auprc": [
-     0.7901468405584631,
-     0.027715402699508517
+     0.7958733735220301,
+     0.027400857526517056
     ],
     "val_chuan": {
      "fpr": [
-      0.015211528417454063,
-      0.0031312172019635613
+      0.015200014244337878,
+      0.004198010285433771
      ],
      "recall": [
-      0.5656238911886458,
-      0.05530943184025633
+      0.5860389562389119,
+      0.04320931501315065
      ],
      "groups": {
       "l\u1ed7i | t\u1ea5t c\u1ea3": [
-       0.5656238911886458,
-       0.05530943184025633
+       0.5860389562389119,
+       0.04320931501315065
       ],
       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
-       0.5032721274892669,
-       0.06705547682492431
+       0.5307747350037596,
+       0.05474896068498922
       ],
       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
-       0.662946276454776,
-       0.042603212599044045
+       0.6722986786809526,
+       0.030548354915245563
       ],
       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": [
-       0.01631138951078931,
-       0.003795976692826305
+       0.016870802172152626,
+       0.005108476164764118
       ]
      }
     },
     "oracle": {
      "fpr": [
-      0.010001899245050093,
-      0.0
+      0.010001899245050095,
+      1.7797887332061147e-18
      ],
      "recall": [
-      0.5330928444707275,
-      0.039619744690633896
+      0.5518528237729153,
+      0.046668317091897046
      ],
      "groups": {
       "l\u1ed7i | t\u1ea5t c\u1ea3": [
-       0.5330928444707275,
-       0.039619744690633896
+       0.5518528237729153,
+       0.046668317091897046
       ],
       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
-       0.4665340674800495,
-       0.04951387994488279
+       0.49335690203022287,
+       0.05257399876418003
       ],
       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
-       0.636981789270435,
-       0.03236854553809724
+       0.6431567788588952,
+       0.04503068669180502
       ],
       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": [
-       0.01060710713094841,
-       0.0006253657483817267
+       0.011104296670318679,
+       0.00046229973640616185
       ]
      }
     },
     "val_cung_dk": {
      "fpr": [
-      0.008995299368501021,
-      0.00047003017573703205
+      0.009332890176154978,
+      0.0007010092132343794
      ],
      "recall": [
-      0.52382170313424,
-      0.04290982933088082
+      0.5460293465405085,
+      0.04713374966018361
      ],
      "groups": {
       "l\u1ed7i | t\u1ea5t c\u1ea3": [
-       0.52382170313424,
-       0.04290982933088082
+       0.5460293465405085,
+       0.04713374966018361
       ],
       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
-       0.45646542314502625,
-       0.05291528664383248
+       0.48690300046086293,
+       0.05320732986744042
       ],
       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
-       0.6289554386097755,
-       0.034903825638919896
+       0.6383173058721086,
+       0.04527066697427171
       ],
       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": [
-       0.00952936693183442,
-       0.0009827080420464907
+       0.010372058543323966,
+       0.000992119592658292
       ]
      }
     }
@@ -1689,6 +2799,561 @@
        "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.413309239090887,
        "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6229508196721312,
        "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.009958676701757728
+      }
+     }
+    },
+    {
+     "auroc": 0.8209331920126358,
+     "auprc": 0.7511263178043254,
+     "val_chuan": {
+      "thr": 0.505973756313324,
+      "fpr": 0.012069702293338399,
+      "recall": 0.5438719692489651,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5438719692489651,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.47576830717733526,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6501722636580471,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.013456866574572476
+      }
+     },
+     "oracle": {
+      "thr": 0.5499696731567383,
+      "fpr": 0.010001899245050093,
+      "recall": 0.5350827912477824,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5350827912477824,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.46549591287263203,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6436981789270435,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011218025055971038
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.5598553419113159,
+      "fpr": 0.009622050235031574,
+      "recall": 0.5332273802483738,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5332273802483738,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.46330074950881706,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6423730738651422,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.010810151002715191
+      }
+     }
+    },
+    {
+     "auroc": 0.8315118844192018,
+     "auprc": 0.7832763188243531,
+     "val_chuan": {
+      "thr": 0.7288841009140015,
+      "fpr": 0.01123403447129766,
+      "recall": 0.5913069189828504,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5913069189828504,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5301865282460524,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6867073032218983,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012513099604630115
+      }
+     },
+     "oracle": {
+      "thr": 0.7679159641265869,
+      "fpr": 0.010001899245050093,
+      "recall": 0.5834491425192194,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5834491425192194,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5212724670725496,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6804982395032749,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011143595484209023
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.7877523899078369,
+      "fpr": 0.009384644603770002,
+      "recall": 0.5791617386162035,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5791617386162035,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5163727654207194,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6771665467762087,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.010438003143905111
+      }
+     }
+    },
+    {
+     "auroc": 0.8188594457333828,
+     "auprc": 0.7646762941655054,
+     "val_chuan": {
+      "thr": 0.6902402639389038,
+      "fpr": 0.012748682398746498,
+      "recall": 0.5404863985807214,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5404863985807214,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.47143862032163386,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6482603263544466,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.013971919211165626
+      }
+     },
+     "oracle": {
+      "thr": 0.7682448029518127,
+      "fpr": 0.010001899245050093,
+      "recall": 0.5183471318746304,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5183471318746304,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.4466369127028404,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6302767576572142,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011024508169389796
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.8093143105506897,
+      "fpr": 0.008641564977921276,
+      "recall": 0.5054036073329391,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5054036073329391,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.43227739103015017,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6195434066558134,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.00953591673414948
+      }
+     }
+    },
+    {
+     "auroc": 0.8609635310852278,
+     "auprc": 0.8012205759341071,
+     "val_chuan": {
+      "thr": 0.7065566182136536,
+      "fpr": 0.016770333792317554,
+      "recall": 0.59183914843288,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.59183914843288,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5422781187086133,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6691969863324878,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.019053970371076073
+      }
+     },
+     "oracle": {
+      "thr": 0.830767035484314,
+      "fpr": 0.010001899245050093,
+      "recall": 0.5510644589000592,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5510644589000592,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.4957430809906129,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6374133949191686,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.01150383461153718
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.8549376130104065,
+      "fpr": 0.008727031005175443,
+      "recall": 0.540508574807806,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.540508574807806,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.4836029786305091,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6293302540415704,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.010047992187872147
+      }
+     }
+    },
+    {
+     "auroc": 0.8582654479201963,
+     "auprc": 0.7930859640686406,
+     "val_chuan": {
+      "thr": 0.5812560319900513,
+      "fpr": 0.01163999810075495,
+      "recall": 0.5930958013010054,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5930958013010054,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.533509593227739,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6861015409078862,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.013034106606964226
+      }
+     },
+     "oracle": {
+      "thr": 0.6308024525642395,
+      "fpr": 0.010001899245050093,
+      "recall": 0.5845357776463631,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5845357776463631,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.524049773206879,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6789459735736191,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011256728433287287
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.6532638072967529,
+      "fpr": 0.009377522434832154,
+      "recall": 0.5800635718509758,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5800635718509758,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.519016663836806,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6753492598341726,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.010601748201781546
+      }
+     }
+    },
+    {
+     "auroc": 0.8820148161313041,
+     "auprc": 0.813846782492704,
+     "val_chuan": {
+      "thr": 0.6507821083068848,
+      "fpr": 0.01418973458050425,
+      "recall": 0.5976123595505618,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5976123595505618,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5448492492783855,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6799681974785143,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.015918996808459963
+      }
+     },
+     "oracle": {
+      "thr": 0.7357607483863831,
+      "fpr": 0.010001899245050093,
+      "recall": 0.5743273211117682,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5743273211117682,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5191864554782061,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6603945027070003,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011256728433287287
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.729857325553894,
+      "fpr": 0.010272541664688287,
+      "recall": 0.5760792430514489,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5760792430514489,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5210056516360637,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6620414189982206,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011563378268946791
+      }
+     }
+    },
+    {
+     "auroc": 0.8889121617169815,
+     "auprc": 0.8240183520123808,
+     "val_chuan": {
+      "thr": 0.6912914514541626,
+      "fpr": 0.0145292246332083,
+      "recall": 0.6162921348314607,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6162921348314607,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5562616731753462,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.7099912921667361,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.015966631734387653
+      }
+     },
+     "oracle": {
+      "thr": 0.7949296236038208,
+      "fpr": 0.010001899245050093,
+      "recall": 0.5865981667652277,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5865981667652277,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5219031217406069,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6875780865482907,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011149549849949984
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.7972719669342041,
+      "fpr": 0.009911685105170695,
+      "recall": 0.5857406859846245,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5857406859846245,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5209450117641351,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6868776738727141,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011051302815224122
+      }
+     }
+    },
+    {
+     "auroc": 0.8323584939944237,
+     "auprc": 0.7578565746514497,
+     "val_chuan": {
+      "thr": 0.691413402557373,
+      "fpr": 0.013608090783913394,
+      "recall": 0.5265966883500887,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5265966883500887,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.45614524462124334,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6365615416650892,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.014891868718144144
+      }
+     },
+     "oracle": {
+      "thr": 0.7919310927391052,
+      "fpr": 0.010001899245050093,
+      "recall": 0.5001330573625073,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5001330573625073,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.42791132025129164,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6128610911293682,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.010956032963368742
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.7634345293045044,
+      "fpr": 0.010918284981719767,
+      "recall": 0.5079982259018332,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5079982259018332,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.4360491910641085,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6203006095483284,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011938503310627352
+      }
+     }
+    },
+    {
+     "auroc": 0.8261843270442556,
+     "auprc": 0.7692428530213038,
+     "val_chuan": {
+      "thr": 0.6937128901481628,
+      "fpr": 0.028854280423531647,
+      "recall": 0.57576138379657,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.57576138379657,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5421325830159847,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6282512399197365,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.03393988472347925
+      }
+     },
+     "oracle": {
+      "thr": 0.9588186740875244,
+      "fpr": 0.010001899245050093,
+      "recall": 0.4221318746303962,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.4221318746303962,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.3816552259441628,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.48531026388520804,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011896822750440622
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9605792760848999,
+      "fpr": 0.009852333697355302,
+      "recall": 0.4187610881135423,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.4187610881135423,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.37841705678317605,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.4817324802180744,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011715214595341304
+      }
+     }
+    },
+    {
+     "auroc": 0.8609953054282411,
+     "auprc": 0.8074064797428044,
+     "val_chuan": {
+      "thr": 0.6399169564247131,
+      "fpr": 0.012760552680309577,
+      "recall": 0.602343287995269,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.602343287995269,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5634050500885343,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6631204331200545,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.01450781212785214
+      }
+     },
+     "oracle": {
+      "thr": 0.6956939697265625,
+      "fpr": 0.010001899245050093,
+      "recall": 0.5882835600236547,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5882835600236547,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5485240255172581,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6503426343088631,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011453222502739007
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.7031950950622559,
+      "fpr": 0.009657661079720811,
+      "recall": 0.5864207569485511,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5864207569485511,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5464380139229146,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6488282285238329,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011072143095317486
+      }
+     }
+    },
+    {
+     "auroc": 0.860818605608484,
+     "auprc": 0.8182543250736866,
+     "val_chuan": {
+      "thr": 0.6471136212348938,
+      "fpr": 0.019688049000522293,
+      "recall": 0.6486324659964519,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6486324659964519,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6162951463846509,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6991065005868322,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.022054970704520553
+      }
+     },
+     "oracle": {
+      "thr": 0.834326982498169,
+      "fpr": 0.010001899245050093,
+      "recall": 0.5942120047309284,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5942120047309284,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5604336963640333,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6469352212925453,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011423450674034202
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.8304085731506348,
+      "fpr": 0.010179953468496273,
+      "recall": 0.5956460674157303,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5956460674157303,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.561864797341548,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.648373906788324,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011619944743485924
+      }
+     }
+    },
+    {
+     "auroc": 0.8582889431630001,
+     "auprc": 0.7884320741540654,
+     "val_chuan": {
+      "thr": 0.7288210391998291,
+      "fpr": 0.011578272636626941,
+      "recall": 0.5604745712596096,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5604745712596096,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.49324471826715505,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6654109718699125,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.012602415090744534
+      }
+     },
+     "oracle": {
+      "thr": 0.7619912624359131,
+      "fpr": 0.010001899245050093,
+      "recall": 0.5500591366055588,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5500591366055588,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.48205059790913724,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6562109567258547,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.010956032963368742
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.7781800031661987,
+      "fpr": 0.009275438013389677,
+      "recall": 0.5446924896510941,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5446924896510941,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.47610789046013535,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6517434596600159,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.010176011051302815
+      }
+     }
+    },
+    {
+     "auroc": 0.8819169103332689,
+     "auprc": 0.8235384899659978,
+     "val_chuan": {
+      "thr": 0.5858383178710938,
+      "fpr": 0.013057309719386545,
+      "recall": 0.6178444707273802,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6178444707273802,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5696267009484076,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6931056676636504,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.014236888486638403
+      }
+     },
+     "oracle": {
+      "thr": 0.683780312538147,
+      "fpr": 0.010001899245050093,
+      "recall": 0.5948772915434654,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5948772915434654,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.542848133504742,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6760875326543747,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011104892106892774
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.7241877317428589,
+      "fpr": 0.008864726271307155,
+      "recall": 0.5854893554109994,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5854893554109994,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.532224027942853,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6686290841631015,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.009887224312866193
+      }
+     }
+    },
+    {
+     "auroc": 0.877535158645576,
+     "auprc": 0.8328276365399931,
+     "val_chuan": {
+      "thr": 0.7051563262939453,
+      "fpr": 0.01885475523479417,
+      "recall": 0.6505174452986399,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6505174452986399,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6179566788754942,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.7013402491197517,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.021539918067927405
+      }
+     },
+     "oracle": {
+      "thr": 0.8816494345664978,
+      "fpr": 0.010001899245050093,
+      "recall": 0.5876774098166765,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5876774098166765,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5505615252140588,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.645610116230644,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011429405039775162
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.9015305042266846,
+      "fpr": 0.009002421537438868,
+      "recall": 0.5768554109994086,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5768554109994086,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5389186698037693,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6360693597849544,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.010295098366122041
+      }
+     }
+    },
+    {
+     "auroc": 0.8939521956454893,
+     "auprc": 0.8379242291969715,
+     "val_chuan": {
+      "thr": 0.6675993204116821,
+      "fpr": 0.016359622050235032,
+      "recall": 0.6359846244825547,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6359846244825547,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5860358502922842,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.7139476772801272,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.018169747058543323
+      }
+     },
+     "oracle": {
+      "thr": 0.7870709300041199,
+      "fpr": 0.010001899245050093,
+      "recall": 0.6008131283264341,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6008131283264341,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5461954544352002,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6860636807632605,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011277568713380651
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.8293948769569397,
+      "fpr": 0.00799344760457718,
+      "recall": 0.5854302188054405,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5854302188054405,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5291920343464235,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6732101616628176,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.009041704377649692
       }
      }
     }
@@ -1973,6 +3638,290 @@
        "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.9034734518640697,
        "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.9212130390338091,
        "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011378792930976992
+      }
+     }
+    }
+   ]
+  },
+  "grugat_more": {
+   "n_seeds": 5,
+   "summary": {
+    "auroc": [
+     0.8727276514256932,
+     0.024351720772586544
+    ],
+    "auprc": [
+     0.8170665738785434,
+     0.026980512360920944
+    ],
+    "val_chuan": {
+     "fpr": [
+      0.014562461421584922,
+      0.0033834596308697238
+     ],
+     "recall": [
+      0.6185541099940862,
+      0.04184767326583922
+     ],
+     "groups": {
+      "l\u1ed7i | t\u1ea5t c\u1ea3": [
+       0.6185541099940862,
+       0.04184767326583922
+      ],
+      "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
+       0.5670216120503554,
+       0.048057794728263374
+      ],
+      "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
+       0.6989891341384924,
+       0.03256919464056549
+      ],
+      "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": [
+       0.01618456152050684,
+       0.004084314812408878
+      ]
+     }
+    },
+    "oracle": {
+     "fpr": [
+      0.010001899245050093,
+      0.0
+     ],
+     "recall": [
+      0.5931505026611473,
+      0.028761975023558307
+     ],
+     "groups": {
+      "l\u1ed7i | t\u1ea5t c\u1ea3": [
+       0.5931505026611473,
+       0.028761975023558307
+      ],
+      "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
+       0.538744026972615,
+       0.03396531262529483
+      ],
+      "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
+       0.6780714042327641,
+       0.021549251339415185
+      ],
+      "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": [
+       0.0112084980707855,
+       0.0004286285240052875
+      ]
+     }
+    },
+    "val_cung_dk": {
+     "fpr": [
+      0.008725131760125349,
+      0.00020227182698343409
+     ],
+     "recall": [
+      0.5828119455943228,
+      0.02852003887064287
+     ],
+     "groups": {
+      "l\u1ed7i | t\u1ea5t c\u1ea3": [
+       0.5828119455943228,
+       0.02852003887064287
+      ],
+      "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
+       0.5273121983166371,
+       0.03400347821818456
+      ],
+      "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": [
+       0.6694392912580927,
+       0.021073802145125484
+      ],
+      "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": [
+       0.009793145334159006,
+       0.00027403508801268807
+      ]
+     }
+    }
+   },
+   "per_seed": [
+    {
+     "auroc": 0.9030539372362127,
+     "auprc": 0.8528205110523114,
+     "val_chuan": {
+      "thr": 0.6725149154663086,
+      "fpr": 0.0191159014291819,
+      "recall": 0.6689237137788291,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6689237137788291,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6272103233317972,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.7340324840040889,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.0219716095841471
+      }
+     },
+     "oracle": {
+      "thr": 0.8275424838066101,
+      "fpr": 0.010001899245050093,
+      "recall": 0.6216587817859255,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6216587817859255,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5752783370121523,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6940521712792943,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011804530081455723
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.8557214140892029,
+      "fpr": 0.008620198471107735,
+      "recall": 0.610156712004731,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.610156712004731,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5626894995997769,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6842463938212244,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.010253417805935312
+      }
+     }
+    },
+    {
+     "auroc": 0.8555302436347563,
+     "auprc": 0.7880421658201183,
+     "val_chuan": {
+      "thr": 0.6169685125350952,
+      "fpr": 0.012843644651251127,
+      "recall": 0.5680366646954464,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5680366646954464,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5083319184029883,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6612274258887669,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.014093983708855333
+      }
+     },
+     "oracle": {
+      "thr": 0.6807911396026611,
+      "fpr": 0.010001899245050093,
+      "recall": 0.5490390301596688,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5490390301596688,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.48705945133043876,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6457804868814598,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011003667889296432
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.716751754283905,
+      "fpr": 0.008724656948862828,
+      "recall": 0.537448255470136,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.537448255470136,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.4737793193780775,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6368265626774694,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.009607369123041014
+      }
+     }
+    },
+    {
+     "auroc": 0.8889607686246683,
+     "auprc": 0.8291467418218145,
+     "val_chuan": {
+      "thr": 0.6913866996765137,
+      "fpr": 0.013938084611366981,
+      "recall": 0.6277646363098758,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6277646363098758,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5737987241370947,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.711997879831901,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.014906754632496546
+      }
+     },
+     "oracle": {
+      "thr": 0.7865594029426575,
+      "fpr": 0.010001899245050093,
+      "recall": 0.6004952690715553,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6004952690715553,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5420476871952846,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6917237723848105,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.010679154956414043
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.8178658485412598,
+      "fpr": 0.009004795593751483,
+      "recall": 0.5902202838557067,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5902202838557067,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5300531205278094,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6841328133873471,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.009598437574429571
+      }
+     }
+    },
+    {
+     "auroc": 0.8428477509456143,
+     "auprc": 0.7923614133719031,
+     "val_chuan": {
+      "thr": 0.59245365858078,
+      "fpr": 0.010353259579317221,
+      "recall": 0.5841070372560615,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5841070372560615,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5305503674776239,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6677015106197706,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011488948697184776
+      }
+     },
+     "oracle": {
+      "thr": 0.5978796482086182,
+      "fpr": 0.010001899245050093,
+      "recall": 0.5820742164399764,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5820742164399764,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5284279719601233,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.665808503388483,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011122755204115658
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.6192746162414551,
+      "fpr": 0.008810122976116993,
+      "recall": 0.5751404494382022,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.5751404494382022,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.521211827200621,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6593154885851664,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.009833635021197542
+      }
+     }
+    },
+    {
+     "auroc": 0.8732455566872139,
+     "auprc": 0.8229620373265703,
+     "val_chuan": {
+      "thr": 0.5594302415847778,
+      "fpr": 0.01656141683680737,
+      "recall": 0.6439384979302188,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6439384979302188,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5952167269022728,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.7199863703479348,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.018461510979850427
+      }
+     },
+     "oracle": {
+      "thr": 0.695883572101593,
+      "fpr": 0.010001899245050093,
+      "recall": 0.6124852158486103,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6124852158486103,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.5609066873650763,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6929920872297732,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.011432382222645645
+      }
+     },
+     "val_cung_dk": {
+      "thr": 0.7405140399932861,
+      "fpr": 0.008465884810787711,
+      "recall": 0.6010940272028386,
+      "groups": {
+       "l\u1ed7i | t\u1ea5t c\u1ea3": 0.6010940272028386,
+       "l\u1ed7i | \u0111ang \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.548827224876901,
+       "l\u1ed7i | kh\u00f4ng \u0111o v\u1edbi rover l\u1ed7i kh\u00e1c": 0.6826751978192557,
+       "trung th\u1ef1c | \u0111ang \u0111o v\u1edbi rover l\u1ed7i": 0.009672867146191588
       }
      }
     }
@@ -2266,50 +4215,74 @@
  "bootstrap_diff": {
   "grugat - gru": {
    "recall": [
-    -0.14274835873589867,
-    -0.17709860948924186,
-    -0.10916142459997724
+    -0.11185453625082391,
+    -0.1514407144926517,
+    -0.07438582082552563
    ],
    "fpr": [
-    -0.0008622748735093538,
-    -0.004297898864777381,
-    0.00235231428593183
+    -0.00022798896070338882,
+    -0.003460159820469187,
+    0.002783918990157876
    ]
   },
   "grugat_mf - gru_mf": {
    "recall": [
-    0.13090517380509845,
-    0.11247082848318185,
-    0.14915994136722185
+    0.1314968925873237,
+    0.08862699764639842,
+    0.17990769034317391
    ],
    "fpr": [
-    0.00031056318254074004,
-    -0.0017331233438967928,
-    0.002462291752972762
+    0.0003160618766117461,
+    -0.002124344153042638,
+    0.0027647806442155465
    ]
   },
   "grugat_mf - grugat": {
    "recall": [
-    0.34134076804929847,
-    0.32654956845545413,
-    0.3558207142729781
+    0.31943282612412316,
+    0.2866171219039478,
+    0.3550789940053496
    ],
    "fpr": [
-    0.0010947611111628238,
-    -0.00022643401405525384,
-    0.0024321172951908433
+    0.0007666608080457558,
+    -0.0008194488348023516,
+    0.0023379199748058007
+   ]
+  },
+  "grugat_mf - grugat_more": {
+   "recall": [
+    0.2826599222744589,
+    0.24748160813131956,
+    0.3189242311737034
+   ],
+   "fpr": [
+    0.0013709459131677599,
+    -7.817291296603868e-05,
+    0.0028929130219625338
+   ]
+  },
+  "grugat_more - grugat": {
+   "recall": [
+    0.03677290384966423,
+    0.006551430378206285,
+    0.06681449958948318
+   ],
+   "fpr": [
+    -0.0006042851051220042,
+    -0.0012951848052071575,
+    9.144463647848652e-05
    ]
   },
   "gru_mf - gru": {
    "recall": [
-    0.0676872355083013,
-    0.05808614417581741,
-    0.07814228937450823
+    0.07608139728597556,
+    0.034355306506768435,
+    0.11183030247894449
    ],
    "fpr": [
-    -7.807694488727015e-05,
-    -0.002712901102319925,
-    0.0024627061386449964
+    0.00022260997073062083,
+    -0.0026468600501896125,
+    0.0028722879213942043
    ]
   }
  }

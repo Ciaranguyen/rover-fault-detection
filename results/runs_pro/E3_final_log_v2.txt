@@ -1,0 +1,239 @@
+Thiết bị: cuda
+  baseline: t1=4.449 t2=4.508 | logistic C=0.01
+
+=== test
+  THIẾU checkpoint ae seed 15 — bỏ qua
+  THIẾU checkpoint ae seed 16 — bỏ qua
+  THIẾU checkpoint ae seed 17 — bỏ qua
+  THIẾU checkpoint ae seed 18 — bỏ qua
+  THIẾU checkpoint ae seed 19 — bỏ qua
+  THIẾU checkpoint ae seed 20 — bỏ qua
+  THIẾU checkpoint ae seed 21 — bỏ qua
+  THIẾU checkpoint ae seed 22 — bỏ qua
+  THIẾU checkpoint ae seed 23 — bỏ qua
+  THIẾU checkpoint ae seed 24 — bỏ qua
+  THIẾU checkpoint ae seed 25 — bỏ qua
+  THIẾU checkpoint ae seed 26 — bỏ qua
+  THIẾU checkpoint ae seed 27 — bỏ qua
+  THIẾU checkpoint ae seed 28 — bỏ qua
+  THIẾU checkpoint ae seed 29 — bỏ qua
+mô hình           macro-F1       recall@1%     FPR    trễ  bỏ sót    ECE
+threshold  0.471±0.000   0.181±0.000   0.010   78.0   0.541    nan
+logistic   0.661±0.000   0.350±0.000   0.009   41.0   0.303  0.330
+ae         0.588±0.002   0.377±0.003   0.010   38.4   0.353    nan
+gat        0.718±0.006   0.715±0.012   0.009   11.1   0.000  0.200
+gru        0.865±0.019   0.839±0.019   0.010   12.3   0.002  0.127
+grugat     0.883±0.017   0.872±0.023   0.010    8.4   0.000  0.105
+
+nhóm (tỉ lệ báo động)                     logistic       gat       gru    grugat
+drift | tất cả                               0.049     0.535     0.702     0.761
+drift | 0-30 bước sau lỗi                    0.000     0.036     0.107     0.135
+drift | 30-100 bước sau lỗi                  0.000     0.418     0.606     0.694
+drift | 100-400 bước sau lỗi                 0.088     0.719     0.898     0.948
+drift | 0 người quan sát                     0.040     0.021     0.834     0.875
+spoof | tất cả                               0.757     0.962     0.979     0.991
+spoof | 0-30 bước sau lỗi                    0.193     0.828     0.885     0.932
+spoof | 30-100 bước sau lỗi                  0.783     0.970     0.985     1.000
+spoof | 100-400 bước sau lỗi                 0.880     0.991     0.999     1.000
+spoof | 0 người quan sát                     0.603     0.890     0.981     0.999
+spoof_one | tất cả                           0.547     0.829     0.975     0.980
+spoof_one | 0-30 bước sau lỗi                0.111     0.724     0.869     0.887
+spoof_one | 30-100 bước sau lỗi              0.586     0.889     0.985     0.991
+spoof_one | 100-400 bước sau lỗi             0.634     0.820     0.995     0.997
+spoof_one | 0 người quan sát                 0.588     0.387     0.997     0.995
+trung thực | đang đo với rover lỗi           0.023     0.016     0.017     0.010
+trung thực | còn lại                         0.002     0.006     0.006     0.011
+
+Chênh lệch, trung bình [KTC 95% bootstrap hai tầng: seed × episode]:
+  grugat - gru         macro_f1 +0.017 [+0.005, +0.030] | recall_fault_at_thr +0.033 [+0.018, +0.049] | fpr_at_thr +0.001 [-0.000, +0.002] | fpr_honest_neighbor -0.007 [-0.010, -0.005]
+  grugat - gat         macro_f1 +0.165 [+0.155, +0.175] | recall_fault_at_thr +0.157 [+0.140, +0.175] | fpr_at_thr +0.001 [-0.000, +0.002] | fpr_honest_neighbor -0.006 [-0.008, -0.004]
+  grugat - logistic    macro_f1 +0.222 [+0.210, +0.233] | recall_fault_at_thr +0.523 [+0.492, +0.555] | fpr_at_thr +0.001 [-0.002, +0.003] | fpr_honest_neighbor -0.013 [-0.018, -0.009]
+-> results/runs_pro/E3_final_test.json  (1.6 phút)
+
+=== ood_drift8
+  THIẾU checkpoint ae seed 15 — bỏ qua
+  THIẾU checkpoint ae seed 16 — bỏ qua
+  THIẾU checkpoint ae seed 17 — bỏ qua
+  THIẾU checkpoint ae seed 18 — bỏ qua
+  THIẾU checkpoint ae seed 19 — bỏ qua
+  THIẾU checkpoint ae seed 20 — bỏ qua
+  THIẾU checkpoint ae seed 21 — bỏ qua
+  THIẾU checkpoint ae seed 22 — bỏ qua
+  THIẾU checkpoint ae seed 23 — bỏ qua
+  THIẾU checkpoint ae seed 24 — bỏ qua
+  THIẾU checkpoint ae seed 25 — bỏ qua
+  THIẾU checkpoint ae seed 26 — bỏ qua
+  THIẾU checkpoint ae seed 27 — bỏ qua
+  THIẾU checkpoint ae seed 28 — bỏ qua
+  THIẾU checkpoint ae seed 29 — bỏ qua
+mô hình           macro-F1       recall@1%     FPR    trễ  bỏ sót    ECE
+threshold  0.313±0.000   0.013±0.000   0.000  240.5   0.853    nan
+logistic   0.476±0.000   0.313±0.000   0.006  121.5   0.053  0.296
+ae         0.365±0.005   0.132±0.009   0.006  143.4   0.073    nan
+gat        0.515±0.012   0.735±0.017   0.012   18.4   0.000  0.157
+gru        0.578±0.010   0.836±0.022   0.017   19.6   0.000  0.112
+grugat     0.610±0.016   0.882±0.024   0.008   15.8   0.000  0.070
+
+nhóm (tỉ lệ báo động)                     logistic       gat       gru    grugat
+drift | tất cả                               0.313     0.735     0.836     0.882
+drift | 0-30 bước sau lỗi                    0.000     0.205     0.322     0.379
+drift | 30-100 bước sau lỗi                  0.072     0.751     0.832     0.901
+drift | 100-400 bước sau lỗi                 0.523     0.853     0.961     0.992
+drift | 0 người quan sát                     0.325     0.058     0.909     0.942
+trung thực | đang đo với rover lỗi           0.009     0.019     0.027     0.009
+trung thực | còn lại                         0.003     0.004     0.006     0.007
+
+Chênh lệch, trung bình [KTC 95% bootstrap hai tầng: seed × episode]:
+  grugat - gru         macro_f1 +0.032 [+0.023, +0.041] | recall_fault_at_thr +0.045 [+0.029, +0.063] | fpr_at_thr -0.009 [-0.012, -0.007] | fpr_honest_neighbor -0.018 [-0.022, -0.014]
+  grugat - gat         macro_f1 +0.096 [+0.086, +0.105] | recall_fault_at_thr +0.146 [+0.130, +0.162] | fpr_at_thr -0.004 [-0.005, -0.002] | fpr_honest_neighbor -0.010 [-0.012, -0.007]
+  grugat - logistic    macro_f1 +0.135 [+0.125, +0.144] | recall_fault_at_thr +0.569 [+0.547, +0.590] | fpr_at_thr +0.002 [-0.000, +0.003] | fpr_honest_neighbor -0.000 [-0.003, +0.002]
+-> results/runs_pro/E3_final_ood_drift8.json  (1.0 phút)
+
+=== ood_noise2
+  THIẾU checkpoint ae seed 15 — bỏ qua
+  THIẾU checkpoint ae seed 16 — bỏ qua
+  THIẾU checkpoint ae seed 17 — bỏ qua
+  THIẾU checkpoint ae seed 18 — bỏ qua
+  THIẾU checkpoint ae seed 19 — bỏ qua
+  THIẾU checkpoint ae seed 20 — bỏ qua
+  THIẾU checkpoint ae seed 21 — bỏ qua
+  THIẾU checkpoint ae seed 22 — bỏ qua
+  THIẾU checkpoint ae seed 23 — bỏ qua
+  THIẾU checkpoint ae seed 24 — bỏ qua
+  THIẾU checkpoint ae seed 25 — bỏ qua
+  THIẾU checkpoint ae seed 26 — bỏ qua
+  THIẾU checkpoint ae seed 27 — bỏ qua
+  THIẾU checkpoint ae seed 28 — bỏ qua
+  THIẾU checkpoint ae seed 29 — bỏ qua
+mô hình           macro-F1       recall@1%     FPR    trễ  bỏ sót    ECE
+threshold  0.462±0.000   0.159±0.000   0.010   75.0   0.567    nan
+logistic   0.667±0.000   0.336±0.000   0.010   38.5   0.356  0.339
+ae         0.597±0.002   0.372±0.003   0.011   40.7   0.354    nan
+gat        0.696±0.008   0.701±0.012   0.018    7.5   0.000  0.222
+gru        0.845±0.014   0.809±0.017   0.013   14.2   0.013  0.121
+grugat     0.850±0.014   0.850±0.020   0.020    7.4   0.002  0.103
+
+nhóm (tỉ lệ báo động)                     logistic       gat       gru    grugat
+drift | tất cả                               0.040     0.526     0.662     0.733
+drift | 0-30 bước sau lỗi                    0.000     0.047     0.076     0.139
+drift | 30-100 bước sau lỗi                  0.000     0.398     0.545     0.627
+drift | 100-400 bước sau lỗi                 0.073     0.714     0.868     0.936
+drift | 0 người quan sát                     0.067     0.024     0.776     0.864
+spoof | tất cả                               0.759     0.969     0.982     0.990
+spoof | 0-30 bước sau lỗi                    0.260     0.857     0.888     0.926
+spoof | 30-100 bước sau lỗi                  0.809     0.972     0.991     1.000
+spoof | 100-400 bước sau lỗi                 0.848     0.993     1.000     1.000
+spoof | 0 người quan sát                     0.757     0.954     0.994     0.994
+spoof_one | tất cả                           0.588     0.834     0.970     0.976
+spoof_one | 0-30 bước sau lỗi                0.111     0.747     0.876     0.890
+spoof_one | 30-100 bước sau lỗi              0.610     0.865     0.968     0.979
+spoof_one | 100-400 bước sau lỗi             0.685     0.837     0.992     0.994
+spoof_one | 0 người quan sát                 0.655     0.430     0.998     0.996
+trung thực | đang đo với rover lỗi           0.022     0.023     0.021     0.017
+trung thực | còn lại                         0.003     0.015     0.009     0.021
+
+Chênh lệch, trung bình [KTC 95% bootstrap hai tầng: seed × episode]:
+  grugat - gru         macro_f1 +0.005 [-0.007, +0.015] | recall_fault_at_thr +0.041 [+0.025, +0.057] | fpr_at_thr +0.006 [+0.003, +0.009] | fpr_honest_neighbor -0.004 [-0.008, +0.001]
+  grugat - gat         macro_f1 +0.154 [+0.144, +0.165] | recall_fault_at_thr +0.149 [+0.131, +0.168] | fpr_at_thr +0.002 [-0.001, +0.004] | fpr_honest_neighbor -0.006 [-0.009, -0.003]
+  grugat - logistic    macro_f1 +0.183 [+0.169, +0.197] | recall_fault_at_thr +0.514 [+0.478, +0.553] | fpr_at_thr +0.010 [+0.006, +0.013] | fpr_honest_neighbor -0.005 [-0.012, +0.002]
+-> results/runs_pro/E3_final_ood_noise2.json  (0.9 phút)
+
+=== ood_two_faulty
+  THIẾU checkpoint ae seed 15 — bỏ qua
+  THIẾU checkpoint ae seed 16 — bỏ qua
+  THIẾU checkpoint ae seed 17 — bỏ qua
+  THIẾU checkpoint ae seed 18 — bỏ qua
+  THIẾU checkpoint ae seed 19 — bỏ qua
+  THIẾU checkpoint ae seed 20 — bỏ qua
+  THIẾU checkpoint ae seed 21 — bỏ qua
+  THIẾU checkpoint ae seed 22 — bỏ qua
+  THIẾU checkpoint ae seed 23 — bỏ qua
+  THIẾU checkpoint ae seed 24 — bỏ qua
+  THIẾU checkpoint ae seed 25 — bỏ qua
+  THIẾU checkpoint ae seed 26 — bỏ qua
+  THIẾU checkpoint ae seed 27 — bỏ qua
+  THIẾU checkpoint ae seed 28 — bỏ qua
+  THIẾU checkpoint ae seed 29 — bỏ qua
+mô hình           macro-F1       recall@1%     FPR    trễ  bỏ sót    ECE
+threshold  0.432±0.000   0.196±0.000   0.045   79.5   0.487    nan
+logistic   0.667±0.000   0.379±0.000   0.048   35.0   0.265  0.277
+ae         0.573±0.002   0.444±0.003   0.040   38.0   0.242    nan
+gat        0.720±0.006   0.511±0.020   0.023    9.2   0.000  0.141
+gru        0.835±0.015   0.817±0.020   0.054    6.0   0.012  0.104
+grugat     0.798±0.021   0.602±0.045   0.014    9.0   0.011  0.079
+
+nhóm (tỉ lệ báo động)                     logistic       gat       gru    grugat
+drift | tất cả                               0.045     0.353     0.635     0.518
+drift | 0-30 bước sau lỗi                    0.000     0.032     0.107     0.131
+drift | 30-100 bước sau lỗi                  0.000     0.284     0.518     0.477
+drift | 100-400 bước sau lỗi                 0.080     0.468     0.826     0.633
+drift | 0 người quan sát                     0.051     0.021     0.678     0.460
+spoof | tất cả                               0.716     0.703     0.976     0.700
+spoof | 0-30 bước sau lỗi                    0.251     0.559     0.875     0.703
+spoof | 30-100 bước sau lỗi                  0.770     0.648     0.978     0.722
+spoof | 100-400 bước sau lỗi                 0.797     0.767     0.999     0.687
+spoof | 0 người quan sát                     0.584     0.932     0.982     0.388
+spoof_one | tất cả                           0.568     0.571     0.943     0.639
+spoof_one | 0-30 bước sau lỗi                0.169     0.583     0.834     0.620
+spoof_one | 30-100 bước sau lỗi              0.583     0.524     0.943     0.657
+spoof_one | 100-400 bước sau lỗi             0.658     0.596     0.970     0.633
+spoof_one | 0 người quan sát                 0.562     0.526     0.976     0.507
+trung thực | đang đo với rover lỗi           0.053     0.028     0.062     0.015
+trung thực | còn lại                         0.025     0.003     0.025     0.008
+
+Chênh lệch, trung bình [KTC 95% bootstrap hai tầng: seed × episode]:
+  grugat - gru         macro_f1 -0.036 [-0.051, -0.022] | recall_fault_at_thr -0.214 [-0.242, -0.188] | fpr_at_thr -0.041 [-0.050, -0.032] | fpr_honest_neighbor -0.046 [-0.057, -0.037]
+  grugat - gat         macro_f1 +0.079 [+0.067, +0.090] | recall_fault_at_thr +0.092 [+0.066, +0.115] | fpr_at_thr -0.009 [-0.012, -0.005] | fpr_honest_neighbor -0.012 [-0.016, -0.008]
+  grugat - logistic    macro_f1 +0.131 [+0.116, +0.144] | recall_fault_at_thr +0.224 [+0.189, +0.259] | fpr_at_thr -0.034 [-0.042, -0.026] | fpr_honest_neighbor -0.038 [-0.047, -0.029]
+-> results/runs_pro/E3_final_ood_two_faulty.json  (1.0 phút)
+
+=== ood_n8
+  THIẾU checkpoint ae seed 15 — bỏ qua
+  THIẾU checkpoint ae seed 16 — bỏ qua
+  THIẾU checkpoint ae seed 17 — bỏ qua
+  THIẾU checkpoint ae seed 18 — bỏ qua
+  THIẾU checkpoint ae seed 19 — bỏ qua
+  THIẾU checkpoint ae seed 20 — bỏ qua
+  THIẾU checkpoint ae seed 21 — bỏ qua
+  THIẾU checkpoint ae seed 22 — bỏ qua
+  THIẾU checkpoint ae seed 23 — bỏ qua
+  THIẾU checkpoint ae seed 24 — bỏ qua
+  THIẾU checkpoint ae seed 25 — bỏ qua
+  THIẾU checkpoint ae seed 26 — bỏ qua
+  THIẾU checkpoint ae seed 27 — bỏ qua
+  THIẾU checkpoint ae seed 28 — bỏ qua
+  THIẾU checkpoint ae seed 29 — bỏ qua
+mô hình           macro-F1       recall@1%     FPR    trễ  bỏ sót    ECE
+threshold  0.477±0.000   0.195±0.000   0.009   80.0   0.589    nan
+logistic   0.626±0.000   0.374±0.000   0.005   35.0   0.336  0.361
+ae         0.551±0.004   0.323±0.005   0.007   32.6   0.342    nan
+gat        0.738±0.009   0.763±0.009   0.006    9.4   0.000  0.181
+gru        0.823±0.046   0.827±0.013   0.011    6.8   0.015  0.144
+grugat     0.852±0.024   0.858±0.017   0.009    4.5   0.001  0.121
+
+nhóm (tỉ lệ báo động)                     logistic       gat       gru    grugat
+drift | tất cả                               0.051     0.587     0.675     0.729
+drift | 0-30 bước sau lỗi                    0.000     0.040     0.126     0.164
+drift | 30-100 bước sau lỗi                  0.002     0.459     0.589     0.658
+drift | 100-400 bước sau lỗi                 0.090     0.787     0.852     0.903
+drift | 0 người quan sát                     0.012     0.017     0.667     0.763
+spoof | tất cả                               0.861     0.974     0.993     0.995
+spoof | 0-30 bước sau lỗi                    0.273     0.872     0.954     0.965
+spoof | 30-100 bước sau lỗi                  0.937     0.977     0.997     0.998
+spoof | 100-400 bước sau lỗi                 0.965     0.998     1.000     1.000
+spoof | 0 người quan sát                     0.901     0.907     0.999     0.999
+spoof_one | tất cả                           0.531     0.903     0.966     0.980
+spoof_one | 0-30 bước sau lỗi                0.045     0.797     0.910     0.927
+spoof_one | 30-100 bước sau lỗi              0.574     0.932     0.962     0.983
+spoof_one | 100-400 bước sau lỗi             0.623     0.912     0.982     0.991
+spoof_one | 0 người quan sát                 0.561     0.387     0.962     0.983
+trung thực | đang đo với rover lỗi           0.014     0.006     0.020     0.007
+trung thực | còn lại                         0.001     0.006     0.008     0.010
+
+Chênh lệch, trung bình [KTC 95% bootstrap hai tầng: seed × episode]:
+  grugat - gru         macro_f1 +0.029 [+0.006, +0.053] | recall_fault_at_thr +0.031 [+0.018, +0.045] | fpr_at_thr -0.002 [-0.005, +0.001] | fpr_honest_neighbor -0.012 [-0.018, -0.008]
+  grugat - gat         macro_f1 +0.114 [+0.101, +0.128] | recall_fault_at_thr +0.096 [+0.080, +0.111] | fpr_at_thr +0.004 [+0.002, +0.005] | fpr_honest_neighbor +0.001 [-0.001, +0.003]
+  grugat - logistic    macro_f1 +0.226 [+0.211, +0.242] | recall_fault_at_thr +0.484 [+0.441, +0.529] | fpr_at_thr +0.005 [+0.003, +0.007] | fpr_honest_neighbor -0.007 [-0.012, -0.002]
+-> results/runs_pro/E3_final_ood_n8.json  (1.7 phút)
+
+Tổng: 7.4 phút
