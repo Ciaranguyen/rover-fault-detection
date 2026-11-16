@@ -13,3 +13,4 @@ date,run_id,experiment,model,config,data_split,seed,account,gpu,duration_min,git
 2026-11-14,E6-logistic-w60,E6,logistic,window 60,train/val,-,free,Tesla T4,0.93,40abc3b,results/runs_free/E1_logistic_w60_val.json,
 2026-11-15,E7-gru-mf,E7,gru_mf,"h64 lr3e-3, train+train_two",train+train_two/val,10-14,free,Tesla T4,3.76,bbf6ef9,results/runs_free/E2_gru_mf_report.json,
 2026-11-16,E2-gru-ext,E2,gru,h64 lr3e-3,train/val,15-29,free,Tesla T4,8.07,8458780,results/runs_free/E2_gru_report_s15-29.json,
+2026-11-16,E2-gat-ext,E2,gat,h64 lr3e-3,train/val,15-29,free,Tesla T4,36.88,94c289c,results/runs_free/E2_gat_report_s15-29.json,
