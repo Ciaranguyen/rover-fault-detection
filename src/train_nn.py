@@ -271,6 +271,8 @@ def main():
     ap.add_argument("--lr", type=float, default=None)
     ap.add_argument("--max_train", type=int, default=None, help="chỉ để chạy thử")
     ap.add_argument("--max_val", type=int, default=None, help="chỉ để chạy thử")
+    ap.add_argument("--seeds", type=int, nargs="+", default=None,
+                    help="report: chỉ train các seed này (thêm seed sau power analysis); file kết quả có hậu tố _s<đầu>-<cuối>")
     args = ap.parse_args()
 
     acc = os.environ.get("ACC", "local")
@@ -311,7 +313,8 @@ def main():
     if args.mode == "report":
         res = {"model": args.model, "config": cfg, "seeds": {}}
         per_seed = []
-        for s in seeds["report_seeds"]:
+        seed_list = args.seeds or seeds["report_seeds"]
+        for s in seed_list:
             print(f"  seed {s}", flush=True)
             ck = out_dir / "ckpt" / f"{name}_s{s}.pt"
             if args.model == "ae":
@@ -333,10 +336,11 @@ def main():
             print(f"  seed {s}: val macro-F1 {m['macro_f1']:.4f} | recall lỗi @1%: {m['recall_fault_at_thr']:.4f}",
                   flush=True)
         res["summary_val"] = summarize(per_seed)
-        path = out_dir / f"{name}_report.json"
+        suffix = f"_s{min(seed_list)}-{max(seed_list)}" if args.seeds else ""
+        path = out_dir / f"{name}_report{suffix}.json"
         json.dump(res, open(path, "w"), indent=1)
         sv = res["summary_val"]
-        print(f"{name} (val, 5 seed): macro-F1 {sv['macro_f1']['mean']:.4f} ± {sv['macro_f1']['std']:.4f} | "
+        print(f"{name} (val, {len(per_seed)} seed): macro-F1 {sv['macro_f1']['mean']:.4f} ± {sv['macro_f1']['std']:.4f} | "
               f"recall lỗi @1% {sv['recall_fault_at_thr']['mean']:.4f} ± {sv['recall_fault_at_thr']['std']:.4f}  -> {path}")
         return
 
@@ -344,7 +348,7 @@ def main():
     res = {"model": args.model, "config": cfg, "splits": {}}
     tests = {sp: load_split(sp) for sp in args.splits}
     for s in seeds["report_seeds"]:
-        ck = torch.load(out_dir / "ckpt" / f"{name}_s{s}.pt", map_location=DEV, weights_only=False)
+        ck = torch.load(out_dir / "ckpt" / f"{name}_s{s}.pt", map_location=DEV, weights_only=False)  # bản 5 seed gốc
         if args.model == "ae":
             model = SeqAE(hidden=cfg["hidden"], window=args.window).to(DEV)
             model.load_state_dict(ck["state"])

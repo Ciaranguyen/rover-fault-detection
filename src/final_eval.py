@@ -8,7 +8,7 @@ Một lần chạy, cho mỗi tập:
             trung bình ± độ lệch chuẩn qua 5 seed (baseline tất định: 1 lần).
   E4      : recall tách theo loại lỗi × thời gian kể từ lúc lỗi bắt đầu, lúc không có người quan sát,
             và tỉ lệ báo nhầm ở rover trung thực đang đo với rover lỗi ("đổ oan hàng xóm").
-  Kiểm định: khoảng tin cậy 95% bootstrap theo episode (lấy mẫu lại episode, 2000 lần) cho chênh lệch
+  Kiểm định: khoảng tin cậy 95% bootstrap HAI TẦNG (lấy mẫu lại seed và episode, 2000 lần) cho chênh lệch
             GRU+GAT − GRU, GRU+GAT − GAT, GRU+GAT − logistic.
 
 Checkpoint được tìm trong mọi results/runs_*/ckpt (cả Pro lẫn Free), nên một tài khoản chạy được hết.
@@ -35,7 +35,7 @@ from models import MODELS, SeqAE  # noqa: E402
 from train_nn import DEV, ae_score, ae_windows, flat, load_split, predict, summarize  # noqa: E402
 
 W = 30
-SEEDS = [10, 11, 12, 13, 14]
+SEEDS = list(range(10, 30))          # có checkpoint seed nào thì dùng seed đó (5 hoặc 20)
 NN = ["ae", "gat", "gru", "grugat"]
 ORDER = ["threshold", "logistic", "ae", "gat", "gru", "grugat"]
 COMPARE = [("grugat", "gru"), ("grugat", "gat"), ("grugat", "logistic")]
@@ -161,18 +161,23 @@ def macro_f1_from_conf(c):
 
 
 def bootstrap(stats, E, B=2000, seed=0):
-    """stats[model] = list theo seed của (conf, gs). Trả về mẫu bootstrap của các thước đo (trung bình qua seed)."""
+    """Bootstrap HAI TẦNG: mỗi lần lấy mẫu lại cả episode (dao động dữ liệu) lẫn seed huấn luyện
+    (dao động do train lại). Episode được lấy chung cho mọi mô hình (ghép cặp theo episode);
+    seed lấy độc lập cho từng mô hình (các mô hình train độc lập).
+    stats[model] = list theo seed của (conf, gs). Trả về mẫu bootstrap (B,) của từng thước đo."""
     rng = np.random.default_rng(seed)
     W_ = np.stack([np.bincount(rng.integers(0, E, E), minlength=E) for _ in range(B)]).astype(float)  # (B,E)
     res = {}
     for m, lst in stats.items():
-        per = {}
-        mf = []
-        for conf, gs in lst:
-            mf.append(macro_f1_from_conf(np.einsum("be,eij->bij", W_, conf)))
-            for g, (a, n) in gs.items():
-                per.setdefault(g, []).append((W_ @ a) / np.maximum(W_ @ n, 1))
-        res[m] = {"macro_f1": np.mean(mf, 0), **{g: np.mean(v, 0) for g, v in per.items()}}
+        n_s = len(lst)
+        pick = rng.integers(0, n_s, (B, n_s))                          # seed lấy lại cho từng lần bootstrap
+        cols = np.arange(B)[:, None]
+        mf = np.stack([macro_f1_from_conf(np.einsum("be,eij->bij", W_, conf)) for conf, _ in lst])  # (n_s,B)
+        out = {"macro_f1": mf[pick, cols].mean(1)}
+        for g in lst[0][1]:
+            M = np.stack([(W_ @ gs[g][0]) / np.maximum(W_ @ gs[g][1], 1) for _, gs in lst])      # (n_s,B)
+            out[g] = M[pick, cols].mean(1)
+        res[m] = out
     return res
 
 
@@ -245,7 +250,7 @@ def main():
         print(f"\n{'nhóm (tỉ lệ báo động)':40s}" + "".join(f"{m:>10s}" for m in show))
         for g in groups:
             print(f"{g:40s}" + "".join(f"{res['groups'][m][g]['mean']:10.3f}" for m in show))
-        print("\nChênh lệch, trung bình [KTC 95% bootstrap theo episode]:")
+        print("\nChênh lệch, trung bình [KTC 95% bootstrap hai tầng: seed × episode]:")
         for k, v in res["bootstrap_diff"].items():
             print(f"  {k:20s} " + " | ".join(f"{mm} {x[0]:+.3f} [{x[1]:+.3f}, {x[2]:+.3f}]" for mm, x in v.items()))
         print(f"-> {path}  ({res['minutes']:.1f} phút)", flush=True)

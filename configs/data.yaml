@@ -21,3 +21,6 @@ splits:
   ood_two_faulty_b: {episodes: 300, seed_base: 370000, overrides: {n_faulty: 2, p_fault: 1.0}}
   # dữ liệu train bổ sung có 2 rover lỗi (mô hình biến thể _mf)
   train_two:      {episodes: 1000, seed_base: 400000, overrides: {n_faulty: 2, p_fault: 1.0}}
+  # đối chứng cho _mf (thêm 16/11): cùng số episode bổ sung nhưng chỉ <= 1 rover lỗi như train gốc,
+  # để tách tác dụng của "có ví dụ 2 rover lỗi" khỏi tác dụng của "nhiều dữ liệu hơn"
+  train_extra:    {episodes: 1000, seed_base: 410000}

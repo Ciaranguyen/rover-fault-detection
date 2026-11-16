@@ -38,7 +38,7 @@ from models import MODELS, SeqAE  # noqa: E402
 from train_nn import DEV, ae_score, ae_windows, flat, load_split, predict  # noqa: E402
 
 BASE = ["ae", "gat", "gru", "grugat"]
-TAGS = ["", "_mf", "_gauss"]
+TAGS = ["", "_mf", "_more", "_gauss"]
 
 
 def available_models():
@@ -150,7 +150,8 @@ def main():
             res["models"][m] = {"n_seeds": len(rows), "summary": summ, "per_seed": rows}
         if stats:
             bs = bootstrap(stats, E, args.boot)
-            for a, b in [("grugat", "gru"), ("grugat_mf", "gru_mf"), ("grugat_mf", "grugat"), ("gru_mf", "gru")]:
+            for a, b in [("grugat", "gru"), ("grugat_mf", "gru_mf"), ("grugat_mf", "grugat"), ("grugat_mf", "grugat_more"),
+                         ("grugat_more", "grugat"), ("gru_mf", "gru")]:
                 if a in bs and b in bs:
                     res["bootstrap_diff"][f"{a} - {b}"] = {"recall": ci(bs[a]["fault"] - bs[b]["fault"]),
                                                            "fpr": ci(bs[a]["honest"] - bs[b]["honest"])}
@@ -168,14 +169,14 @@ def main():
             line += " ".join(f"{s[c]['recall'][0]:7.3f}±{s[c]['recall'][1]:.3f} {s[c]['fpr'][0]:10.3f}" for c in cols)
             print(line)
         c = "val_cung_dk" if thr_cal else "val_chuan"
-        names = [m for m in ["logistic", "gru", "grugat", "gru_mf", "grugat_mf", "grugat_gauss"] if m in res["models"]]
+        names = [m for m in ["logistic", "gru", "grugat", "gru_mf", "grugat_more", "grugat_mf", "grugat_gauss"] if m in res["models"]]
         print(f"\nTỉ lệ báo động theo nhóm, ở {hdr[c]}:")
         print(f"{'nhóm':38s}" + "".join(f"{m:>13s}" for m in names))
         for g in G:
             print(f"{g:38s}" + "".join(f"{res['models'][m]['summary'][c]['groups'][g][0]:13.3f}" for m in names)
                   + f"   (n={int(G[g].sum())})")
         if res["bootstrap_diff"]:
-            print("\nChênh lệch ở ngưỡng val cùng điều kiện [KTC 95% bootstrap theo episode]:")
+            print("\nChênh lệch ở ngưỡng val cùng điều kiện [KTC 95% bootstrap hai tầng: seed × episode]:")
             for k, v in res["bootstrap_diff"].items():
                 print(f"  {k:22s} recall {v['recall'][0]:+.3f} [{v['recall'][1]:+.3f}, {v['recall'][2]:+.3f}] | "
                       f"FPR {v['fpr'][0]:+.3f} [{v['fpr'][1]:+.3f}, {v['fpr'][2]:+.3f}]")
