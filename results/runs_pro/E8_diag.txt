@@ -1,0 +1,50 @@
+
+marl+gru: báo nhầm/mốc chung 0.2373
+   tốc độ 0-0.05 m/s      báo nhầm 0.957   (tỉ trọng mẫu 0.092)
+   tốc độ 0.05-0.2 m/s    báo nhầm 0.8982   (tỉ trọng mẫu 0.027)
+   tốc độ 0.2-0.28 m/s    báo nhầm 0.5479   (tỉ trọng mẫu 0.028)
+   tốc độ 0.28-1.0 m/s    báo nhầm 0.1289   (tỉ trọng mẫu 0.854)
+   bước 30-150            báo nhầm 0.0059   (tỉ trọng mẫu 0.360)
+   bước 150-250           báo nhầm 0.1685   (tỉ trọng mẫu 0.276)
+   bước 250-400           báo nhầm 0.5177   (tỉ trọng mẫu 0.365)
+   0 người quan sát       báo nhầm 0.1976   (tỉ trọng mẫu 0.263)
+   1 người quan sát       báo nhầm 0.2168   (tỉ trọng mẫu 0.400)
+   2+ người quan sát      báo nhầm 0.2928   (tỉ trọng mẫu 0.336)
+
+marl+grugat: báo nhầm/mốc chung 0.1207
+   tốc độ 0-0.05 m/s      báo nhầm 0.6505   (tỉ trọng mẫu 0.105)
+   tốc độ 0.05-0.2 m/s    báo nhầm 0.4887   (tỉ trọng mẫu 0.029)
+   tốc độ 0.2-0.28 m/s    báo nhầm 0.2719   (tỉ trọng mẫu 0.028)
+   tốc độ 0.28-1.0 m/s    báo nhầm 0.0367   (tỉ trọng mẫu 0.838)
+   bước 30-150            báo nhầm 0.0059   (tỉ trọng mẫu 0.360)
+   bước 150-250           báo nhầm 0.1252   (tỉ trọng mẫu 0.276)
+   bước 250-400           báo nhầm 0.2305   (tỉ trọng mẫu 0.365)
+   0 người quan sát       báo nhầm 0.1754   (tỉ trọng mẫu 0.280)
+   1 người quan sát       báo nhầm 0.1156   (tỉ trọng mẫu 0.421)
+   2+ người quan sát      báo nhầm 0.0766   (tỉ trọng mẫu 0.299)
+
+heuristic+gru: báo nhầm/mốc chung 0.0263
+   tốc độ 0-0.05 m/s      báo nhầm 0.9613   (tỉ trọng mẫu 0.004)
+   tốc độ 0.05-0.2 m/s    báo nhầm 0.814   (tỉ trọng mẫu 0.002)
+   tốc độ 0.2-0.28 m/s    báo nhầm 0.128   (tỉ trọng mẫu 0.009)
+   tốc độ 0.28-1.0 m/s    báo nhầm 0.0203   (tỉ trọng mẫu 0.986)
+   bước 30-150            báo nhầm 0.0006   (tỉ trọng mẫu 0.360)
+   bước 150-250           báo nhầm 0.0245   (tỉ trọng mẫu 0.276)
+   bước 250-400           báo nhầm 0.0529   (tỉ trọng mẫu 0.365)
+   0 người quan sát       báo nhầm 0.0232   (tỉ trọng mẫu 0.147)
+   1 người quan sát       báo nhầm 0.033   (tỉ trọng mẫu 0.186)
+   2+ người quan sát      báo nhầm 0.025   (tỉ trọng mẫu 0.667)
+
+heuristic+grugat: báo nhầm/mốc chung 0.0165
+   tốc độ 0-0.05 m/s      báo nhầm 0.8935   (tỉ trọng mẫu 0.004)
+   tốc độ 0.05-0.2 m/s    báo nhầm 0.4966   (tỉ trọng mẫu 0.002)
+   tốc độ 0.2-0.28 m/s    báo nhầm 0.0943   (tỉ trọng mẫu 0.009)
+   tốc độ 0.28-1.0 m/s    báo nhầm 0.0117   (tỉ trọng mẫu 0.986)
+   bước 30-150            báo nhầm 0.0003   (tỉ trọng mẫu 0.360)
+   bước 150-250           báo nhầm 0.0104   (tỉ trọng mẫu 0.276)
+   bước 250-400           báo nhầm 0.0371   (tỉ trọng mẫu 0.365)
+   0 người quan sát       báo nhầm 0.0252   (tỉ trọng mẫu 0.148)
+   1 người quan sát       báo nhầm 0.0227   (tỉ trọng mẫu 0.186)
+   2+ người quan sát      báo nhầm 0.0129   (tỉ trọng mẫu 0.666)
+
+-> results/runs_pro/e8/E8_diag.json
