@@ -5,7 +5,7 @@ không có gì được chọn trên test.
 
 Một lần chạy, cho mỗi tập:
   E3 / E5 : mọi thước đo (macro-F1, recall @ báo nhầm 1% trên val, trễ, bỏ sót, ECE) cho 6 mô hình,
-            trung bình ± độ lệch chuẩn qua 5 seed (baseline tất định: 1 lần).
+            trung bình ± độ lệch chuẩn qua các seed báo cáo 10–29 (baseline tất định: 1 lần).
   E4      : recall tách theo loại lỗi × thời gian kể từ lúc lỗi bắt đầu, lúc không có người quan sát,
             và tỉ lệ báo nhầm ở rover trung thực đang đo với rover lỗi ("đổ oan hàng xóm").
   Kiểm định: khoảng tin cậy 95% bootstrap HAI TẦNG (lấy mẫu lại seed và episode, 2000 lần) cho chênh lệch
@@ -46,7 +46,7 @@ def find_ckpt(model, seed):
     return hits[0] if hits else None
 
 
-# ------------------------------------------------------------------ dự đoán của từng mô hình
+# dự đoán của từng mô hình
 def baseline_predictors(w):
     """Dựng lại hai baseline đúng như lúc dò (tất định): ngưỡng chọn trên val, logistic fit trên train."""
     Xv, yv, _, _ = BL.prepare("val", w)
@@ -102,7 +102,7 @@ def run_models(split, preds_bl):
     return out, y, idx, D
 
 
-# ------------------------------------------------------------------ nhóm phân tích (E4)
+# nhóm phân tích (E4)
 def make_groups(y, idx, D):
     meta = D["meta"]
     e_, t_, n_ = idx[:, 0], idx[:, 1], idx[:, 2]
@@ -136,7 +136,7 @@ def make_groups(y, idx, D):
     return G
 
 
-# ------------------------------------------------------------------ bootstrap theo episode
+# bootstrap theo episode
 def episode_stats(prob, score, thr, y, idx, E, groups):
     """Thống kê cộng được theo episode: ma trận nhầm lẫn 3x3, và (số báo động, số mẫu) cho từng nhóm."""
     pred = prob.argmax(1)
@@ -185,7 +185,7 @@ def ci(x):
     return [float(np.mean(x)), float(np.percentile(x, 2.5)), float(np.percentile(x, 97.5))]
 
 
-# ------------------------------------------------------------------ chương trình chính
+# chương trình chính
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--splits", nargs="+", default=["test"])
@@ -238,7 +238,7 @@ def main():
         path = out_dir / f"E3_final_{sp}.json"
         json.dump(res, open(path, "w"), indent=1)
 
-        # --- in tóm tắt
+        # in tóm tắt
         print(f"{'mô hình':10s} {'macro-F1':>15s} {'recall@1%':>15s} {'FPR':>7s} {'trễ':>6s} {'bỏ sót':>7s} {'ECE':>6s}")
         for m, r in res["models"].items():
             s = r["summary"]

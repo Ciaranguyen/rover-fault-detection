@@ -158,7 +158,7 @@ def main():
         path = out_dir / f"E7_fair_{sp}.json"
         json.dump(res, open(path, "w"), indent=1)
 
-        # --- in bảng
+        # in bảng
         cols = ["val_chuan"] + (["val_cung_dk"] if thr_cal else []) + ["oracle"]
         hdr = {"val_chuan": "ngưỡng val chuẩn", "val_cung_dk": "ngưỡng val cùng đk", "oracle": "oracle (tham khảo)"}
         print(f"{'mô hình':12s} {'AUROC':>13s} {'AUPRC':>13s} " + " ".join(f"{hdr[c]:>24s}" for c in cols))

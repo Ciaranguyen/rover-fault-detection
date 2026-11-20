@@ -129,7 +129,7 @@ def simulate_episode(cfg: SimConfig, noise: NoiseModel, rng):
     p = np.stack([lawnmower_path(strips[order[i]], strips[order[i] + 1], L,
                                  cfg.lane_gap, cfg.speed, T, rng) for i in range(N)], axis=1)  # (T,N,2)
 
-    # --- chọn lỗi
+    # chọn lỗi
     label = np.zeros((T, N), np.int8)
     fault_type, faulty, t_u, rate_faulty = "none", np.array([], int), -1, 0.0
     if rng.random() < cfg.p_fault:
@@ -139,7 +139,7 @@ def simulate_episode(cfg: SimConfig, noise: NoiseModel, rng):
         t_u = int(rng.integers(cfg.t_fault[0], cfg.t_fault[1] + 1))
         rate_faulty = float(rng.uniform(*cfg.drift_rate))
 
-    # --- vị trí tự khai: mọi rover trôi nhẹ; rover F-drift trôi mạnh từ t_u
+    # vị trí tự khai: mọi rover trôi nhẹ; rover F-drift trôi mạnh từ t_u
     p_hat = p.copy()
     step_len = np.r_[np.zeros((1, N)), np.linalg.norm(np.diff(p, axis=0), axis=2)]  # (T,N)
     rate = rng.uniform(0, cfg.honest_drift_max, N)
@@ -153,7 +153,7 @@ def simulate_episode(cfg: SimConfig, noise: NoiseModel, rng):
         off += (r_t * step_len[t])[:, None] * np.c_[np.cos(theta), np.sin(theta)]
         p_hat[t] = p[t] + off
 
-    # --- khai giả
+    # khai giả
     spoof_target = None
     if fault_type in ("spoof", "spoof_one"):
         for k in faulty:
@@ -185,7 +185,7 @@ def simulate_episode(cfg: SimConfig, noise: NoiseModel, rng):
     if len(faulty):
         label[t_u:, faulty] = DRIFT if fault_type == "drift" else SPOOF
 
-    # --- đo UWB (two-way ranging: một giá trị chung cho cả hai đầu của cặp)
+    # đo UWB (two-way ranging: một giá trị chung cho cả hai đầu của cặp)
     iu, ju = np.triu_indices(N, 1)
     d_true = np.linalg.norm(p[:, iu] - p[:, ju], axis=2)            # (T, P)
     bias = noise.pair_bias(rng, len(iu))                              # (P,)

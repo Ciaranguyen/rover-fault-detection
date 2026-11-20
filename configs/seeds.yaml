@@ -2,3 +2,5 @@
 # report_seeds chỉ dùng cho lần chạy cuối, sau khi đã chốt cấu hình.
 tune_seeds: [0]
 report_seeds: [10, 11, 12, 13, 14]
+# Ngày 16/11, sau phân tích lực thống kê (báo cáo Mục 7.3), thêm seed 15–29 bằng tham số --seeds;
+# đánh giá cuối dùng 20 seed 10–29.

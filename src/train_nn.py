@@ -4,10 +4,10 @@ Ba chế độ, chạy theo thứ tự:
   --mode tune    : thử 4 cấu hình (hidden ∈ {32, 64} × lr ∈ {1e-3, 3e-3}) với seed dò,
                    early stopping theo macro-F1 trên val, chọn cấu hình tốt nhất.
                    -> results/runs_<ACC>/E2_<model>_tune.json
-  --mode report  : train lại cấu hình đã chọn với 5 seed báo cáo (configs/seeds.yaml),
+  --mode report  : train lại cấu hình đã chọn với các seed báo cáo (configs/seeds.yaml, mặc định 10–14; dùng --seeds để thêm 15–29),
                    lưu checkpoint và kết quả val của từng seed.
                    -> results/runs_<ACC>/E2_<model>_report.json, results/runs_<ACC>/ckpt/E2_<model>_s<seed>.pt
-  --mode final   : CHỈ CHẠY MỘT LẦN vào ngày đánh giá. Nạp checkpoint 5 seed, chọn ngưỡng báo động
+  --mode final   : CHỈ CHẠY MỘT LẦN vào ngày đánh giá. Nạp checkpoint các seed báo cáo, chọn ngưỡng báo động
                    trên val, đánh giá trên test và các tập ood_*.
                    -> results/runs_<ACC>/E3_<model>_final.json
 
@@ -41,7 +41,7 @@ GRID = {"hidden": [32, 64], "lr": [1e-3, 3e-3]}
 DEV = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
-# ------------------------------------------------------------------ dữ liệu
+# dữ liệu
 def transform(D):
     """Nén thang đo: phần dư có thể từ vài cm tới hàng chục mét (khai giả)."""
     e = D["edge"]
@@ -90,7 +90,7 @@ def set_seed(s):
     torch.backends.cudnn.deterministic = True
 
 
-# ------------------------------------------------------------------ mô hình có giám sát
+# mô hình có giám sát
 @torch.no_grad()
 def predict(model, D, bs=16):
     model.eval()
@@ -156,7 +156,7 @@ def train_supervised(model_name, hidden, lr, seed, Dtr, Dv, args):
                    "params": int(sum(p.numel() for p in model.parameters()))}
 
 
-# ------------------------------------------------------------------ autoencoder
+# autoencoder
 def ae_windows(D, w, stride=1):
     from numpy.lib.stride_tricks import sliding_window_view
     x = sliding_window_view(D["node"], w, axis=1)[:, ::stride]          # (E,T',N,6,W)
@@ -240,7 +240,7 @@ def ae_eval(model, extra, D, w):
     return evaluate(prob, y, idx, D["meta"], extra["t1"], score=s, calibrated=False)
 
 
-# ------------------------------------------------------------------ chương trình chính
+# chương trình chính
 def summarize(per_seed):
     keys = ["macro_f1", "recall_fault_at_thr", "recall_drift_at_thr", "recall_spoof_at_thr",
             "median_delay_steps", "missed_faulty_rovers", "ece_fault", "fpr_at_thr"]
@@ -344,11 +344,11 @@ def main():
               f"recall lỗi @1% {sv['recall_fault_at_thr']['mean']:.4f} ± {sv['recall_fault_at_thr']['std']:.4f}  -> {path}")
         return
 
-    # ---------------- final: đánh giá cuối, chạy một lần
+    # final: đánh giá cuối, chạy một lần
     res = {"model": args.model, "config": cfg, "splits": {}}
     tests = {sp: load_split(sp) for sp in args.splits}
     for s in seeds["report_seeds"]:
-        ck = torch.load(out_dir / "ckpt" / f"{name}_s{s}.pt", map_location=DEV, weights_only=False)  # bản 5 seed gốc
+        ck = torch.load(out_dir / "ckpt" / f"{name}_s{s}.pt", map_location=DEV, weights_only=False)
         if args.model == "ae":
             model = SeqAE(hidden=cfg["hidden"], window=args.window).to(DEV)
             model.load_state_dict(ck["state"])

@@ -54,7 +54,7 @@ def onehot(c, k=3):
     return out
 
 
-# ---------------- threshold
+# Baseline ngưỡng
 def threshold_predict(s, t1, t2):
     c = np.zeros(len(s), int)
     c[s > t1] = 1
@@ -71,7 +71,7 @@ def tune_threshold(Xv, yv):
     return {"t1": t1, "t2": best[1], "val_macro_f1_for_t2": best[0]}
 
 
-# ---------------- logistic
+# Baseline hồi quy logistic
 def fit_logistic(Xtr, ytr, C):
     clf = make_pipeline(StandardScaler(), LogisticRegression(
         C=C, class_weight="balanced", max_iter=2000))

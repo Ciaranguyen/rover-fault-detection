@@ -17,7 +17,7 @@ if not os.path.exists("/content/rover-fault-detection"):
 %cd /content/rover-fault-detection
 !git pull -q
 !git config user.name "Ciara Nguyen"
-!git config user.email "lamanh2003hd@gmail.com"
+!git config user.email "<EMAIL>"
 !git log --oneline -1
 !pip install -q -r requirements.txt
 !mkdir -p results/runs_$ACC

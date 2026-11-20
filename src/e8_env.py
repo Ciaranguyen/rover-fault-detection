@@ -59,7 +59,7 @@ class CoverageEnv:
         self.noise = NoiseModel(noise_file, self.cfg) if with_ranges else None
         self.iu, self.ju = np.triu_indices(n_rovers, 1)
 
-    # ------------------------------------------------------------ khởi tạo
+    # khởi tạo
     def reset(self, seeds):
         """seeds: list B số nguyên — mỗi episode một rng riêng, để mọi điều kiện đánh giá dùng CÙNG episode."""
         B, N, cfg = self.B, self.N, self.cfg
@@ -114,7 +114,7 @@ class CoverageEnv:
         self.nz_miss = np.array([r.random() < 0.1 for r in self.rngs])
         self.nz_pfa = np.array([r.uniform(0, 0.04) for r in self.rngs])
 
-    # ------------------------------------------------------------ quan sát
+    # quan sát
     def nav_pos(self):
         return self.p + self.off             # vị trí rover tự tin (khung định vị của chính nó)
 
@@ -142,7 +142,7 @@ class CoverageEnv:
         pos = (self.p / L).reshape(self.B, -1)                                         # (B,2N)
         return np.concatenate([tc, pos], -1).astype(np.float32)                        # (B,R+2N)
 
-    # ------------------------------------------------------------ nguồn tin cậy
+    # nguồn tin cậy
     def flags_from(self, source, callback=None):
         B, N, t = self.B, self.N, self.t
         fl = np.zeros((B, N), bool)
@@ -178,7 +178,7 @@ class CoverageEnv:
         bi = np.broadcast_to(np.arange(self.B)[:, None, None], cc.shape)
         self.belief[bi[ok], cc[ok]] = True
 
-    # ------------------------------------------------------------ một bước 1 giây
+    # một bước 1 giây
     def _step1(self):
         B, N, t, cfg = self.B, self.N, self.t, self.cfg
         q = self.nav_pos()
@@ -270,7 +270,7 @@ class CoverageEnv:
         rew = 10.0 * (self.true_cov.mean(-1) - before)
         return self.obs(), rew.astype(np.float32), self.t >= T
 
-    # ------------------------------------------------------------ thước đo cuối episode
+    # thước đo cuối episode
     def metrics(self):
         holes = self.belief & ~self.true_cov
         return {"coverage": self.true_cov.mean(-1), "holes": holes.mean(-1),

@@ -1,6 +1,10 @@
-# Thư viện cần cài thêm trên Colab (numpy, scipy, scikit-learn, torch có sẵn trên Colab;
-# phiên bản thật của mọi thư viện được ghi lại bằng pip freeze mỗi phiên, xem results/).
-pyyaml>=6.0
-rosbags==0.11.9          # chỉ cần nếu chạy lại src/noise_tiers.py
-# Từ ngày 13/11 (mô hình đồ thị):
-# torch_geometric==2.6.1
+# Phiên bản đã dùng khi chạy thí nghiệm trên Google Colab (Python 3, GPU T4).
+# Danh sách đầy đủ: results/runs_pro/pip_freeze_2026-11-11.txt
+torch==2.14.1
+numpy==2.4.6
+scipy==1.16.3
+scikit-learn==1.6.1
+PyYAML==6.0.3
+matplotlib==3.10.0
+# Chỉ cần khi trích lại mô hình nhiễu từ dữ liệu gốc TIERS (src/noise_tiers.py)
+rosbags==0.11.9
